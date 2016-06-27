@@ -33,6 +33,7 @@ namespace Cake.Svn.Export
 
             using (var client = GetClient())
             {
+                client.Insecure = settings.Insecure;
                 if (settings.Credentials != null)
                 {
                     client.ForceCredentials(settings.Credentials);

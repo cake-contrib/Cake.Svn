@@ -8,6 +8,7 @@ namespace Cake.Svn
 {
     public abstract class SvnRemoteSettings : SvnSettings
     {
+        public bool Insecure { get; set; }
         public SvnCredentials Credentials { get; set; }
     }
 }
