@@ -6,7 +6,7 @@ namespace Cake.Svn
 {
     public interface ISvnClient : IDisposable
     {
-        bool Insecure { get; set; }
+        bool TrustServerCertificate { get; set; }
         void ForceCredentials(SvnCredentials credentials);
 
         SvnExportResult Export(string from, string to, SvnExportSettings settings);
