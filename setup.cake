@@ -17,6 +17,7 @@ ToolSettings.SetToolSettings(context: Context,
                                 BuildParameters.RootDirectoryPath + "/src/Cake.Svn.Tests/*.cs" },
                             testCoverageFilter: "+[*]* -[xunit.*]* -[Cake.Core]* -[Cake.Testing]* -[*.Tests]* ",
                             testCoverageExcludeByAttribute: "*.ExcludeFromCodeCoverage*",
-                            testCoverageExcludeByFile: "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs");
+                            testCoverageExcludeByFile: "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs",
+                            buildPlatformTarget: PlatformTarget.x64);
 
 Build.Run();
