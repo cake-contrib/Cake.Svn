@@ -12,6 +12,13 @@ namespace Cake.Svn
 {
     public static partial class SvnAliases
     {
+        /// <summary>
+        /// Export a Subversion directory tree.
+        /// </summary>
+        /// <param name="context">The Cake context.</param>
+        /// <param name="repositoryUrl">The URL of the Subversion repository.</param>
+        /// <param name="path">The local directory name.</param>
+        /// <returns>Result of the export operation.</returns>
         [CakeMethodAlias]
         [CakeAliasCategory("Export")]
         [CakeNamespaceImport("Cake.Svn.Export")]
@@ -24,6 +31,14 @@ namespace Cake.Svn
             return SvnExport(context, repositoryUrl, path, null);
         }
 
+        /// <summary>
+        /// Export a Subversion directory tree.
+        /// </summary>
+        /// <param name="context">The Cake context.</param>
+        /// <param name="repositoryUrl">The URL of the Subversion repository.</param>
+        /// <param name="path">The local directory name.</param>
+        /// <param name="settings">The settings.</param>
+        /// <returns>Result of the export operation.</returns>
         [CakeMethodAlias]
         [CakeAliasCategory("Export")]
         [CakeNamespaceImport("Cake.Svn.Export")]

@@ -4,6 +4,9 @@ using Cake.Svn.Internal;
 
 namespace Cake.Svn
 {
+    /// <summary>
+    /// Contains functionality for working with Subversion.
+    /// </summary>
     [CakeAliasCategory("Svn")]
     public static partial class SvnAliases
     {
