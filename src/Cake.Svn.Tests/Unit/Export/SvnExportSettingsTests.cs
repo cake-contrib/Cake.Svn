@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Cake.Svn.Export;
+﻿using Cake.Svn.Export;
 using Xunit;
 
 namespace Cake.Svn.Tests.Unit.Export
