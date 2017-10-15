@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Cake.Svn.Export
+﻿namespace Cake.Svn.Export
 {
     /// <summary>
     /// Settings for <see cref="SvnExporter"/>.

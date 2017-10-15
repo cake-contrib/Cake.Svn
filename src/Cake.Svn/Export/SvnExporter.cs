@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Globalization;
 using Cake.Core;
 using Cake.Core.IO;
-using Cake.Core.Tooling;
-using SharpSvn;
 
 namespace Cake.Svn.Export
 {

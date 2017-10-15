@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Cake.Svn
+﻿namespace Cake.Svn
 {
     /// <summary>
     /// Base setting class for operations accessing a remote subversion repository.

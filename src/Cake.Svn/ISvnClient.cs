@@ -1,5 +1,4 @@
 ﻿using System;
-using Cake.Core.IO;
 using Cake.Svn.Export;
 
 namespace Cake.Svn

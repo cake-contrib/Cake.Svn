@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Cake.Svn.Export
+﻿namespace Cake.Svn.Export
 {
     /// <summary>
     /// Result for <see cref="SvnExporter"/>.

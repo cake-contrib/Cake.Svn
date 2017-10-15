@@ -1,6 +1,4 @@
-﻿using System;
-using System.Net;
-using Cake.Core.IO;
+﻿using System.Net;
 using Cake.Svn.Export;
 using Cake.Svn.Internal.Extensions;
 using SharpSvn.Security;
