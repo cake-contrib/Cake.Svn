@@ -71,7 +71,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -152,7 +153,11 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+    Export a Subversion directory tree.
+    </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -216,17 +221,17 @@ public static SvnExportResult SvnExport(this ICakeContext context, Uri repositor
 					<tbody><tr>
 						<td>context</td>
 						<td>ICakeContext</td>
-						<td></td>
+						<td>The Cake context.</td>
 					</tr>
 					<tr>
 						<td>repositoryUrl</td>
 						<td>Uri</td>
-						<td></td>
+						<td>The URL of the Subversion repository.</td>
 					</tr>
 					<tr>
 						<td>path</td>
 						<td>DirectoryPath</td>
-						<td></td>
+						<td>The local directory name.</td>
 					</tr>
 			</tbody></table>
 		</div>
@@ -244,7 +249,7 @@ public static SvnExportResult SvnExport(this ICakeContext context, Uri repositor
 				</thead>
 				<tbody><tr>
 					<td><a href="/Cake.Svn/api/Cake.Svn.Export/SvnExportResult">SvnExportResult</a></td>
-					<td></td>
+					<td>Result of the export operation.</td>
 				</tr>
 			</tbody></table>
 		</div>

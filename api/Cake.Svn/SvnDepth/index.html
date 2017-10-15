@@ -71,7 +71,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#fields">Fields</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -155,7 +156,11 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+    Tree depth to which Subversion can limit its scope for specific operations.
+    </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -229,7 +234,9 @@ class Type type-node
 								<td><a href="/Cake.Svn/api/Cake.Svn/SvnDepth/8383AE3C">Empty</a></td>
 								<td>0</td>
 								<td>
-									<div></div>
+									<div>
+    Depth undetermined or ignored.
+    </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -237,7 +244,10 @@ class Type type-node
 								<td><a href="/Cake.Svn/api/Cake.Svn/SvnDepth/1EFE5C52">Files</a></td>
 								<td>1</td>
 								<td>
-									<div></div>
+									<div>
+    Directory and its file children, but not subdirs.
+    Updates will pull in any files not already present, but not subdirectories.
+    </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -245,7 +255,10 @@ class Type type-node
 								<td><a href="/Cake.Svn/api/Cake.Svn/SvnDepth/E6953879">Immediates</a></td>
 								<td>2</td>
 								<td>
-									<div></div>
+									<div>
+    Directory and immediate children (Directory and its entries).
+    Updates will pull in any files or subdirectories not already present.
+    </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
@@ -253,7 +266,10 @@ class Type type-node
 								<td><a href="/Cake.Svn/api/Cake.Svn/SvnDepth/146E08FE">Infinity</a></td>
 								<td>3</td>
 								<td>
-									<div></div>
+									<div>
+    Directory and all descendants (full recursion from Directory).
+    Updates will pull in any files or subdirectories not already present.
+    </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>

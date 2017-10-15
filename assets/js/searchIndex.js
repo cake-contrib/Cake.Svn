@@ -34,22 +34,6 @@ var searchModule = function() {
 
     a({
         id:0,
-        title:"SvnTool",
-        content:"SvnTool",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:1,
-        title:"SvnExporter",
-        content:"SvnExporter",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:2,
         title:"SvnLineStyle",
         content:"SvnLineStyle",
         description:'',
@@ -57,23 +41,7 @@ var searchModule = function() {
     });
 
     a({
-        id:3,
-        title:"SvnRemoteSettings",
-        content:"SvnRemoteSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:4,
-        title:"SvnCredentials",
-        content:"SvnCredentials",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:5,
+        id:1,
         title:"SvnDepth",
         content:"SvnDepth",
         description:'',
@@ -81,23 +49,15 @@ var searchModule = function() {
     });
 
     a({
-        id:6,
-        title:"ISvnClient",
-        content:"ISvnClient",
+        id:2,
+        title:"SvnExporter",
+        content:"SvnExporter",
         description:'',
         tags:''
     });
 
     a({
-        id:7,
-        title:"SvnExportSettings",
-        content:"SvnExportSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:8,
+        id:3,
         title:"SvnAliases",
         content:"SvnAliases",
         description:'',
@@ -105,7 +65,15 @@ var searchModule = function() {
     });
 
     a({
-        id:9,
+        id:4,
+        title:"ISvnClient",
+        content:"ISvnClient",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:5,
         title:"SvnSettings",
         content:"SvnSettings",
         description:'',
@@ -113,16 +81,54 @@ var searchModule = function() {
     });
 
     a({
-        id:10,
+        id:6,
+        title:"SvnRemoteSettings",
+        content:"SvnRemoteSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:7,
+        title:"SvnCredentials",
+        content:"SvnCredentials",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:8,
         title:"SvnExportResult",
         content:"SvnExportResult",
         description:'',
         tags:''
     });
 
+    a({
+        id:9,
+        title:"SvnTool",
+        content:"SvnTool",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:10,
+        title:"SvnExportSettings",
+        content:"SvnExportSettings",
+        description:'',
+        tags:''
+    });
+
     y({
-        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn/SvnTool_1',
-        title:"SvnTool<TSettings>",
+        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn/SvnLineStyle',
+        title:"SvnLineStyle",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn/SvnDepth',
+        title:"SvnDepth",
         description:""
     });
 
@@ -133,8 +139,20 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn/SvnLineStyle',
-        title:"SvnLineStyle",
+        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn/SvnAliases',
+        title:"SvnAliases",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn/ISvnClient',
+        title:"ISvnClient",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn/SvnSettings',
+        title:"SvnSettings",
         description:""
     });
 
@@ -151,38 +169,20 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn/SvnDepth',
-        title:"SvnDepth",
+        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn.Export/SvnExportResult',
+        title:"SvnExportResult",
         description:""
     });
 
     y({
-        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn/ISvnClient',
-        title:"ISvnClient",
+        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn/SvnTool_1',
+        title:"SvnTool<TSettings>",
         description:""
     });
 
     y({
         url:'/Cake.Svn/Cake.Svn/api/Cake.Svn.Export/SvnExportSettings',
         title:"SvnExportSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn/SvnAliases',
-        title:"SvnAliases",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn/SvnSettings',
-        title:"SvnSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Svn/Cake.Svn/api/Cake.Svn.Export/SvnExportResult',
-        title:"SvnExportResult",
         description:""
     });
 
