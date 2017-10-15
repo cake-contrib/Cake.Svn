@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>Cake.Svn</id>
+    <title>Cake.Svn</title>
+    <version>0.0.0</version>
+    <authors>Martin Björkström, Pascal Berger and contributors</authors>
+    <owners>cake-contrib, mholo65, pascalberger</owners>
+    <summary>Addin that extends the Cake build automation system with Subversion features using SharpSvn.</summary>
+    <description>
+Addin that extends the Cake build automation system with Subversion features using SharpSvn.
+    </description>
+    <licenseUrl>https://github.com/cake-contrib/Cake.Svn/blob/develop/LICENSE</licenseUrl>
+    <projectUrl>http://cake-contrib.github.io/Cake.Svn/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/cake-contrib/graphics/a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright © 2017 Cake.Svn contributors</copyright>
+    <tags>Cake Script Subversion</tags>
+    <releaseNotes>https://github.com/cake-contrib/Cake.Svn/releases/tag/0.1.0</releaseNotes>
+  </metadata>
+  <files>
+    <file src="Cake.Svn.dll" target="lib\net46" />
+    <file src="Cake.Svn.pdb" target="lib\net46" />
+    <file src="Cake.Svn.xml" target="lib\net46" />
+    <file src="SharpSvn.dll" target="lib\net46" />
+  </files>
+</package>
