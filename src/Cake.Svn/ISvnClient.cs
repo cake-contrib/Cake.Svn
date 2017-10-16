@@ -1,4 +1,5 @@
 ﻿using System;
+using Cake.Svn.Delete;
 using Cake.Svn.Add;
 using Cake.Svn.Export;
 
@@ -29,6 +30,13 @@ namespace Cake.Svn
         /// <returns>Result of the export operation.</returns>
         SvnExportResult Export(string from, string to, SvnExportSettings settings);
 
+        /// <summary>
+        /// Remove a file or a directory from Subversion.
+        /// </summary>
+        /// <param name="fileOrDirectoryPath">The absolute path to the file or directory.</param>
+        /// <param name="settings">The settings.</param>
+        /// <returns><c>true</c> if the command was successful. Otherwise <c>false</c> will be returned.</returns>
+        bool Delete(string fileOrDirectoryPath, SvnDeleteSettings settings);
         /// <summary>
         /// Add a file or a directory to Subversion.
         /// </summary>
