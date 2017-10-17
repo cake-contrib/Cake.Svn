@@ -74,6 +74,8 @@
     <Compile Include="..\SolutionInfo.cs">
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
+    <Compile Include="Internal\Attributes\ValidatedNotNullAttribute.cs" />
+    <Compile Include="Internal\Extensions\ArgumentCheckExtensions.cs" />
     <Compile Include="Internal\Extensions\SvnDepthExtensions.cs" />
     <Compile Include="Internal\Extensions\SvnExportSettingsExtensions.cs" />
     <Compile Include="Internal\Extensions\SvnLineStyleExtensions.cs" />
