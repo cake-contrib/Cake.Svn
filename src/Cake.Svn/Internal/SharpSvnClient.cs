@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using Cake.Svn.Add;
 using Cake.Svn.Export;
 using Cake.Svn.Internal.Extensions;
 using SharpSvn.Security;
@@ -76,6 +77,12 @@ namespace Cake.Svn.Internal
             Export(from, to, arguments, out result);
 
             return new SvnExportResult(result.Revision);
+        }
+
+        /// <inheritdoc/>
+        public bool Add(string fileOrDirectoryPath, SvnAddSettings settings)
+        {
+            return Add(fileOrDirectoryPath, settings.ToSvnAddArgs());
         }
     }
 }

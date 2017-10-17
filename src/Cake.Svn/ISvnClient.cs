@@ -1,4 +1,5 @@
 ﻿using System;
+using Cake.Svn.Add;
 using Cake.Svn.Export;
 
 namespace Cake.Svn
@@ -27,5 +28,13 @@ namespace Cake.Svn
         /// <param name="settings">Settings to use.</param>
         /// <returns>Result of the export operation.</returns>
         SvnExportResult Export(string from, string to, SvnExportSettings settings);
+
+        /// <summary>
+        /// Add a file or a directory to Subversion.
+        /// </summary>
+        /// <param name="fileOrDirectoryPath">The absolute path to the file or directory.</param>
+        /// <param name="settings">The settings for adding the file or directory.</param>
+        /// <returns><c>true</c> if the command was successful. Otherwise <c>false</c> will be returned.</returns>
+        bool Add(string fileOrDirectoryPath, SvnAddSettings settings);
     }
 }
