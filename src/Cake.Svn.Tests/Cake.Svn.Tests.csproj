@@ -159,9 +159,12 @@
     <Compile Include="..\SolutionInfo.cs">
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
+    <Compile Include="Fixtures\Add\SvnAdderFixture.cs" />
     <Compile Include="Fixtures\Export\SvnExporterFixture.cs" />
     <Compile Include="Internal\Extensions\CheckArgumentExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unit\Add\SvnAdderTests.cs" />
+    <Compile Include="Unit\Add\SvnAddSettingsTests.cs" />
     <Compile Include="Unit\Export\SvnExporterTests.cs" />
     <Compile Include="Unit\Export\SvnExportSettingsTests.cs" />
   </ItemGroup>
