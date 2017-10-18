@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using Cake.Svn.Delete;
 using Cake.Svn.Add;
 using Cake.Svn.Export;
 using Cake.Svn.Internal.Extensions;
@@ -79,6 +80,11 @@ namespace Cake.Svn.Internal
             return new SvnExportResult(result.Revision);
         }
 
+        /// <inheritdoc/>
+        public bool Delete(string fileOrDirectoryPath, SvnDeleteSettings settings)
+        {
+            return Delete(fileOrDirectoryPath, settings.ToSvnDeleteArgs());
+        }
         /// <inheritdoc/>
         public bool Add(string fileOrDirectoryPath, SvnAddSettings settings)
         {
