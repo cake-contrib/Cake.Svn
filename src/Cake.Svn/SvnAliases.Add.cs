@@ -19,7 +19,7 @@ namespace Cake.Svn
         /// <para>Add a directory to Subversion.</para>
         /// <code>
         /// <![CDATA[ 
-        ///     var directoryAdded = SvnAdd(@"C:\project\src\");
+        ///     var directoryAdded = SvnAddDirectory(@"C:\project\src\");
         ///
         ///     Verbose("Directory added: {0}", directoryAdded);
         /// ]]>
@@ -52,7 +52,7 @@ namespace Cake.Svn
         ///             Force = true
         ///         };
         ///
-        ///     var directoryAdded = SvnAdd(@"C:\project\src\", svnAddSettings);
+        ///     var directoryAdded = SvnAddDirectory(@"C:\project\src\", svnAddSettings);
         ///
         ///     Verbose("Directory added: {0}", directoryAdded);
         /// ]]>
@@ -80,7 +80,7 @@ namespace Cake.Svn
         /// <para>Add a file to Subversion.</para>
         /// <code>
         /// <![CDATA[
-        ///     var fileAdded = SvnAdd(@"C:\project\src\newfile.cs");
+        ///     var fileAdded = SvnAddFile(@"C:\project\src\newfile.cs");
         ///
         ///     Verbose("File added: {0}", fileAdded);
         /// ]]>
@@ -113,7 +113,7 @@ namespace Cake.Svn
         ///         Force = true
         ///         };
         ///
-        ///     var fileAdded = SvnAdd(@"C:\project\src\newfile.cs", svnAddSettings);
+        ///     var fileAdded = SvnAddFile(@"C:\project\src\newfile.cs", svnAddSettings);
         ///
         ///     Verbose("File added: {0}", fileAdded);
         /// ]]>

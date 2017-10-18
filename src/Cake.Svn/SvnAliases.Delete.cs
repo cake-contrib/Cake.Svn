@@ -19,7 +19,7 @@ namespace Cake.Svn
         /// <para>Delete a directory from Subversion.</para>
         /// <code>
         /// <![CDATA[
-        ///     var directoryRemoved = SvnDelete(@"C:\project\src\newfolder\");
+        ///     var directoryRemoved = SvnDeleteDirectory(@"C:\project\src\newfolder\");
         ///
         ///     Verbose("Directory removed: {0}", directoryRemoved);
         /// ]]>
@@ -51,7 +51,7 @@ namespace Cake.Svn
         ///         Force = true
         ///     };
         ///
-        ///     var directoryRemoved = SvnDelete(@"C:\project\src\newfolder\", svnDeleteSettings);
+        ///     var directoryRemoved = SvnDeleteDirectory(@"C:\project\src\newfolder\", svnDeleteSettings);
         ///
         ///     Verbose("Directory removed: {0}", directoryRemoved);
         /// ]]>
@@ -79,7 +79,7 @@ namespace Cake.Svn
         /// <para>Delete a file from Subversion.</para>
         /// <code>
         /// <![CDATA[
-        ///     var fileRemoved = SvnDelete(@"C:\project\src\newfile.cs");
+        ///     var fileRemoved = SvnDeleteFile(@"C:\project\src\newfile.cs");
         ///
         ///     Verbose("File removed: {0}", fileRemoved);
         /// ]]>
@@ -111,7 +111,7 @@ namespace Cake.Svn
         ///         Force = true
         ///     };
         ///
-        ///     var fileRemoved = SvnDelete(@"C:\project\src\newfile.cs", svnDeleteSettings);
+        ///     var fileRemoved = SvnDeleteFile(@"C:\project\src\newfile.cs", svnDeleteSettings);
         ///
         ///     Verbose("File removed: {0}", fileRemoved);
         /// ]]>
