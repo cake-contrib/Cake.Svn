@@ -1,26 +1,23 @@
-﻿using System;
-using Cake.Svn.Internal.Extensions;
+﻿using Cake.Svn.Internal.Extensions;
+using SharpSvn;
 
 namespace Cake.Svn.Export
 {
     internal static class SvnExportSettingsExtensions
     {
-        internal static SharpSvn.SvnExportArgs ToSharpSvn(this SvnExportSettings settings)
+        internal static SvnExportArgs ToSharpSvn(this SvnExportSettings settings)
         {
-            if (settings == null)
-            {
-                throw new ArgumentNullException(nameof(settings));
-            }
+            settings.NotNull(nameof(settings));
 
-            return new SharpSvn.SvnExportArgs
+            return (new SvnExportArgs
             {
                 Depth = settings.Depth.ToSharpSvn(),
                 IgnoreExternals = settings.IgnoreExternals,
                 IgnoreKeywords = settings.IgnoreKeywords,
                 LineStyle = settings.LineStyle.ToSharpSvn(),
                 Overwrite = settings.Overwrite,
-                Revision = settings.Revision < 0 ? SharpSvn.SvnRevision.Head : new SharpSvn.SvnRevision(settings.Revision),
-            };
+                Revision = settings.Revision < 0 ? SvnRevision.Head : new SvnRevision(settings.Revision)
+            }).SetBaseSettings(settings);
         }
     }
 }
