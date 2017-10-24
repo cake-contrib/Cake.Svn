@@ -188,7 +188,9 @@ namespace Cake.Svn
         /// <param name="context">The Cake context.</param>
         /// <param name="filePath">The file.</param>
         /// <param name="settings">The settings.</param>
-        /// <returns>The Subversion information.</returns>
+        /// <returns>The Subversion information. If no information about the file is available on Subversion 
+        /// <c>null</c> will be returned. For this <see cref="SvnSettings.ThrowOnError"/> has to be set to <c>false</c>.
+        /// </returns>
         /// <example>
         /// <para>Gets Subversion information about file at <paramref name="filePath"/> with specific settings.</para>
         /// <code>
@@ -212,7 +214,7 @@ namespace Cake.Svn
             var svnInformation = new SvnInfo(context.Environment, SvnClientFactoryMethod);
 
             // A file returns only one SvnInfoResult.
-            return svnInformation.GetInfo(filePath, settings ?? new SvnInfoSettings()).Single();
+            return svnInformation.GetInfo(filePath, settings ?? new SvnInfoSettings()).SingleOrDefault();
         }
 
         /// <summary>
