@@ -78,6 +78,7 @@
     <Compile Include="Info\SvnInfo.cs" />
     <Compile Include="Info\SvnInfoResult.cs" />
     <Compile Include="Info\SvnInfoSettings.cs" />
+    <Compile Include="Info\SvnInfoSettingsExtensions.cs" />
     <Compile Include="Delete\SvnDeleter.cs" />
     <Compile Include="Delete\SvnDeleteSettings.cs" />
     <Compile Include="Delete\SvnDeleteSettingsExtensions.cs" />
@@ -86,8 +87,6 @@
     <Compile Include="Add\SvnAdder.cs" />
     <Compile Include="Add\SvnAddSettings.cs" />
     <Compile Include="Internal\Extensions\SvnDepthExtensions.cs" />
-    <Compile Include="Internal\Extensions\SvnInfoSettingsExtensions.cs" />
-    <Compile Include="Internal\Extensions\SvnExportSettingsExtensions.cs" />
     <Compile Include="Internal\Extensions\SvnLineStyleExtensions.cs" />
     <Compile Include="Internal\Extensions\SvnNodeKindExtensions.cs" />
     <Compile Include="ISvnClient.cs" />
@@ -95,6 +94,7 @@
     <Compile Include="Export\SvnExporter.cs" />
     <Compile Include="Export\SvnExportResult.cs" />
     <Compile Include="Export\SvnExportSettings.cs" />
+    <Compile Include="Export\SvnExportSettingsExtensions.cs" />
     <Compile Include="SvnAliases.Add.cs" />
     <Compile Include="SvnAliases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

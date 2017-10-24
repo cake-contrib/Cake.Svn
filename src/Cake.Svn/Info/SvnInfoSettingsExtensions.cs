@@ -1,8 +1,8 @@
 ﻿using System;
-using Cake.Svn.Info;
+using Cake.Svn.Internal.Extensions;
 using SharpSvn;
 
-namespace Cake.Svn.Internal.Extensions
+namespace Cake.Svn.Info
 {
     internal static class SvnInfoSettingsExtensions
     {

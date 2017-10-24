@@ -1,7 +1,7 @@
 ﻿using System;
-using Cake.Svn.Export;
+using Cake.Svn.Internal.Extensions;
 
-namespace Cake.Svn.Internal.Extensions
+namespace Cake.Svn.Export
 {
     internal static class SvnExportSettingsExtensions
     {
