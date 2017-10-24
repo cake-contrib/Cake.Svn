@@ -26,6 +26,36 @@ namespace Cake.Svn.Tests.Unit.Delete
                 // Then
                 Assert.False(settings.Force);
             }
+
+            [Fact]
+            public void Should_Set_ThrowOnCancel_By_Default()
+            {
+                // Given, When
+                var settings = new SvnDeleteSettings();
+
+                // Then
+                Assert.True(settings.ThrowOnCancel);
+            }
+
+            [Fact]
+            public void Should_Set_ThrowOnError_By_Default()
+            {
+                // Given, When
+                var settings = new SvnDeleteSettings();
+
+                // Then
+                Assert.True(settings.ThrowOnError);
+            }
+
+            [Fact]
+            public void Should_Set_ThrowOnWarning_By_Default()
+            {
+                // Given, When
+                var settings = new SvnDeleteSettings();
+
+                // Then
+                Assert.False(settings.ThrowOnWarning);
+            }
         }
     }
 }

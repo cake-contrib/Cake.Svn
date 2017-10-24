@@ -101,6 +101,7 @@
     <Compile Include="SvnAliases.Info.cs" />
     <Compile Include="SvnAliases.Delete.cs" />
     <Compile Include="SvnCredentials.cs" />
+    <Compile Include="SvnClientArgsExtensions.cs" />
     <Compile Include="SvnKind.cs" />
     <Compile Include="SvnDepth.cs" />
     <Compile Include="SvnLineStyle.cs" />
