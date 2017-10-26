@@ -12,10 +12,11 @@ namespace Cake.Svn.Info
             return (new SvnInfoArgs
             {
                 Depth = settings.Depth.ToSharpSvn(),
-                Revision = settings.Revision < 0 ? SvnRevision.Head : new SvnRevision(settings.Revision),
+                Revision = !settings.Revision.HasValue ? new SvnRevision() : 
+                    (settings.Revision < 0 ? SvnRevision.Head : new SvnRevision(settings.Revision.Value)),
                 IncludeExternals = settings.IncludeExternals,
                 RetrieveActualOnly = settings.RetrieveActualOnly,
-                RetrieveExcluded = settings.RetrieveExcluded              
+                RetrieveExcluded = settings.RetrieveExcluded
             }).SetBaseSettings(settings);
         }
     }

@@ -10,16 +10,16 @@
         /// </summary>
         public SvnInfoSettings()
         {
-            Depth = SvnDepth.Infinity;
             RetrieveActualOnly = true;
             RetrieveExcluded = true;
-            Revision = -1;
         }
 
         /// <summary>
         /// Gets or sets the value of the revision on which Subversion should operate.
+        /// Use <c>null</c> for the default revision, <c>-1</c> for the head revision and numbers 
+        /// bigger than -1 for a certain revision.
         /// </summary>
-        public long Revision { get; set; }
+        public long? Revision { get; set; }
 
         /// <summary>
         /// Gets or sets a the tree depth to which Subversion should limit the scope.
