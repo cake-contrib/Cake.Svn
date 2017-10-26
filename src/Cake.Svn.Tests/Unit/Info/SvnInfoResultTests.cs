@@ -24,7 +24,7 @@ namespace Cake.Svn.Tests.Unit.Info
             }
 
             [Fact]
-            public void Should_Throw_If_LastChangedAuthor_Is_Null()
+            public void Should_Not_Throw_If_LastChangedAuthor_Is_Null()
             {
                 // Given
                 var testSvnInfoResult = new TestSvnInfoResult()
@@ -33,9 +33,10 @@ namespace Cake.Svn.Tests.Unit.Info
                 };
 
                 // When
+                var svnInfoResult = GetSvnInfoResultFromParameterList(testSvnInfoResult);
+
                 // Then
-                Assert.Throws<ArgumentNullException>("lastChangedAuthor", () =>
-                    GetSvnInfoResultFromParameterList(testSvnInfoResult));
+                Assert.Null(svnInfoResult.LastChangedAuthor);
             }
 
             [Fact]
@@ -69,7 +70,7 @@ namespace Cake.Svn.Tests.Unit.Info
             }
 
             [Fact]
-            public void Should_Throw_If_FullPath_Is_Null()
+            public void Should_Not_Throw_If_FullPath_Is_Null()
             {
                 // Given
                 var testSvnInfoResult = new TestSvnInfoResult()
@@ -78,9 +79,10 @@ namespace Cake.Svn.Tests.Unit.Info
                 };
 
                 // When
+                var svnInfoResult = GetSvnInfoResultFromParameterList(testSvnInfoResult);
+
                 // Then
-                Assert.Throws<ArgumentNullException>("fullPath", () =>
-                    GetSvnInfoResultFromParameterList(testSvnInfoResult));
+                Assert.Null(svnInfoResult.FullPath);
             }
 
             [Fact]

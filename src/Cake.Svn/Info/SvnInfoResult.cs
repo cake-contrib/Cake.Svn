@@ -31,10 +31,8 @@ namespace Cake.Svn.Info
             SvnKind nodeKind)
         {
             repositoryRoot.NotNull(nameof(repositoryRoot));
-            lastChangedAuthor.NotNull(nameof(lastChangedAuthor));
             uri.NotNull(nameof(uri));
             path.NotNull(nameof(path));
-            fullPath.NotNull(nameof(fullPath));
 
             RepositoryId = repositoryId;
             RepositoryRoot = repositoryRoot;
