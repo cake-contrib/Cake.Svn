@@ -6,6 +6,8 @@
         {
             switch (depth)
             {
+                case SvnDepth.Unknown:
+                    return SharpSvn.SvnDepth.Unknown;
                 case SvnDepth.Empty:
                     return SharpSvn.SvnDepth.Empty;
                 case SvnDepth.Files:

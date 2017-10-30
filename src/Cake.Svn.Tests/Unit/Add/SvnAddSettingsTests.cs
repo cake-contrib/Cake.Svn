@@ -1,9 +1,9 @@
-﻿using Cake.Svn.Export;
+﻿using Cake.Svn.Add;
 using Xunit;
 
-namespace Cake.Svn.Tests.Unit.Export
+namespace Cake.Svn.Tests.Unit.Add
 {
-    public sealed class SvnExportSettingsTests
+    public sealed class SvnAddSettingsTests
     {
         public sealed class TheConstructor
         {
@@ -11,67 +11,57 @@ namespace Cake.Svn.Tests.Unit.Export
             public void Should_Set_Infity_Depth_By_Default()
             {
                 // Given, When
-                var settings = new SvnExportSettings();
+                var settings = new SvnAddSettings();
 
                 // Then
                 Assert.Equal(SvnDepth.Infinity, settings.Depth);
             }
 
             [Fact]
-            public void Should_Ignore_Externals_By_Default()
+            public void Should_Add_Parents_By_Default()
             {
                 // Given, When
-                var settings = new SvnExportSettings();
+                var settings = new SvnAddSettings();
 
                 // Then
-                Assert.True(settings.IgnoreExternals);
+                Assert.True(settings.AddParents);
             }
 
             [Fact]
-            public void Should_Not_Ignore_Keywords_By_Default()
+            public void Should_Not_Force_By_Default()
             {
                 // Given, When
-                var settings = new SvnExportSettings();
+                var settings = new SvnAddSettings();
 
                 // Then
-                Assert.False(settings.IgnoreKeywords);
+                Assert.False(settings.Force);
             }
 
             [Fact]
-            public void Should_Set_Default_LineStyle_By_Default()
+            public void Should_Not_Auto_Props_By_Default()
             {
                 // Given, When
-                var settings = new SvnExportSettings();
+                var settings = new SvnAddSettings();
 
                 // Then
-                Assert.Equal(SvnLineStyle.Default, settings.LineStyle);
+                Assert.True(settings.AutoProperties );
             }
 
             [Fact]
-            public void Should_Not_Overwrite_By_Default()
+            public void Should_Not_Ignore_By_Default()
             {
                 // Given, When
-                var settings = new SvnExportSettings();
+                var settings = new SvnAddSettings();
 
                 // Then
-                Assert.False(settings.Overwrite);
-            }
-
-            [Fact]
-            public void Should_Set_Head_Revision_By_Default()
-            {
-                // Given, When
-                var settings = new SvnExportSettings();
-
-                // Then
-                Assert.Equal(-1, settings.Revision);
+                Assert.True(settings.Ignore);
             }
 
             [Fact]
             public void Should_Set_ThrowOnCancel_By_Default()
             {
                 // Given, When
-                var settings = new SvnExportSettings();
+                var settings = new SvnAddSettings();
 
                 // Then
                 Assert.True(settings.ThrowOnCancel);
@@ -81,7 +71,7 @@ namespace Cake.Svn.Tests.Unit.Export
             public void Should_Set_ThrowOnError_By_Default()
             {
                 // Given, When
-                var settings = new SvnExportSettings();
+                var settings = new SvnAddSettings();
 
                 // Then
                 Assert.True(settings.ThrowOnError);
@@ -91,7 +81,7 @@ namespace Cake.Svn.Tests.Unit.Export
             public void Should_Set_ThrowOnWarning_By_Default()
             {
                 // Given, When
-                var settings = new SvnExportSettings();
+                var settings = new SvnAddSettings();
 
                 // Then
                 Assert.False(settings.ThrowOnWarning);

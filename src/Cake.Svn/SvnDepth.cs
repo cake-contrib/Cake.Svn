@@ -8,6 +8,12 @@
         /// <summary>
         /// Depth undetermined or ignored.
         /// </summary>
+        Unknown = -2,
+
+        /// <summary>
+        /// Just the named directory, no entries. 
+        /// Updates will not pull in any files or subdirectories not already present.
+        /// </summary>
         Empty = 0,
 
         /// <summary>

@@ -1,5 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using Cake.Core.IO;
+using Cake.Svn.Add;
+using Cake.Svn.Delete;
 using Cake.Svn.Export;
+using Cake.Svn.Info;
 
 namespace Cake.Svn
 {
@@ -27,5 +33,39 @@ namespace Cake.Svn
         /// <param name="settings">Settings to use.</param>
         /// <returns>Result of the export operation.</returns>
         SvnExportResult Export(string from, string to, SvnExportSettings settings);
+
+        /// <summary>
+        /// Remove a file or a directory from Subversion.
+        /// </summary>
+        /// <param name="fileOrDirectoryPath">The absolute path to the file or directory.</param>
+        /// <param name="settings">The settings.</param>
+        /// <returns><c>true</c> if the command was successful. Otherwise <c>false</c> will be returned.</returns>
+        bool Delete(string fileOrDirectoryPath, SvnDeleteSettings settings);
+
+        /// <summary>
+        /// Add a file or a directory to Subversion.
+        /// </summary>
+        /// <param name="fileOrDirectoryPath">The absolute path to the file or directory.</param>
+        /// <param name="settings">The settings for adding the file or directory.</param>
+        /// <returns><c>true</c> if the command was successful. Otherwise <c>false</c> will be returned.</returns>
+        bool Add(string fileOrDirectoryPath, SvnAddSettings settings);
+
+        /// <summary>
+        /// Gets the information whether the <paramref name="fileOrDirectoryPath"/> is a working copy or not.
+        /// </summary>
+        /// <param name="fileOrDirectoryPath">The path to the local file or directory.</param>
+        /// <returns>
+        /// <c>true</c> if the <paramref name="fileOrDirectoryPath"/> is a working path. 
+        /// Otherwise <c>false</c> will be returned.
+        /// </returns>
+        bool IsWorkingCopy(string fileOrDirectoryPath);
+
+        /// <summary>
+        /// Gets Subversion information about the file or directory at <paramref name="fileOrDirectoryPath"/> (local or remote).
+        /// </summary>
+        /// <param name="fileOrDirectoryPath">The path to the file or directory (local or remote).</param>
+        /// <param name="settings">The settings.</param>
+        /// <returns>An information result about the Subversion repository.</returns>
+        IEnumerable<SvnInfoResult> GetInfo(string fileOrDirectoryPath, SvnInfoSettings settings);
     }
 }

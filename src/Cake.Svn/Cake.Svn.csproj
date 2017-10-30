@@ -74,17 +74,35 @@
     <Compile Include="..\SolutionInfo.cs">
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
+    <Compile Include="Add\SvnAddSettingsExtensions.cs" />
+    <Compile Include="Info\SvnInfo.cs" />
+    <Compile Include="Info\SvnInfoResult.cs" />
+    <Compile Include="Info\SvnInfoSettings.cs" />
+    <Compile Include="Info\SvnInfoSettingsExtensions.cs" />
+    <Compile Include="Delete\SvnDeleter.cs" />
+    <Compile Include="Delete\SvnDeleteSettings.cs" />
+    <Compile Include="Delete\SvnDeleteSettingsExtensions.cs" />
+    <Compile Include="Internal\Attributes\ValidatedNotNullAttribute.cs" />
+    <Compile Include="Internal\Extensions\ArgumentCheckExtensions.cs" />
+    <Compile Include="Add\SvnAdder.cs" />
+    <Compile Include="Add\SvnAddSettings.cs" />
     <Compile Include="Internal\Extensions\SvnDepthExtensions.cs" />
-    <Compile Include="Internal\Extensions\SvnExportSettingsExtensions.cs" />
     <Compile Include="Internal\Extensions\SvnLineStyleExtensions.cs" />
+    <Compile Include="Internal\Extensions\SvnNodeKindExtensions.cs" />
     <Compile Include="ISvnClient.cs" />
     <Compile Include="Internal\SharpSvnClient.cs" />
     <Compile Include="Export\SvnExporter.cs" />
     <Compile Include="Export\SvnExportResult.cs" />
     <Compile Include="Export\SvnExportSettings.cs" />
+    <Compile Include="Export\SvnExportSettingsExtensions.cs" />
+    <Compile Include="SvnAliases.Add.cs" />
     <Compile Include="SvnAliases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SvnAliases.Info.cs" />
+    <Compile Include="SvnAliases.Delete.cs" />
     <Compile Include="SvnCredentials.cs" />
+    <Compile Include="SvnClientArgsExtensions.cs" />
+    <Compile Include="SvnKind.cs" />
     <Compile Include="SvnDepth.cs" />
     <Compile Include="SvnLineStyle.cs" />
     <Compile Include="SvnRemoteSettings.cs" />
