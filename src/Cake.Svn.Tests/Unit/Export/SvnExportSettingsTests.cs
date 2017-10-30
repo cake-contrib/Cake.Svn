@@ -66,6 +66,36 @@ namespace Cake.Svn.Tests.Unit.Export
                 // Then
                 Assert.Equal(-1, settings.Revision);
             }
+
+            [Fact]
+            public void Should_Set_ThrowOnCancel_By_Default()
+            {
+                // Given, When
+                var settings = new SvnExportSettings();
+
+                // Then
+                Assert.True(settings.ThrowOnCancel);
+            }
+
+            [Fact]
+            public void Should_Set_ThrowOnError_By_Default()
+            {
+                // Given, When
+                var settings = new SvnExportSettings();
+
+                // Then
+                Assert.True(settings.ThrowOnError);
+            }
+
+            [Fact]
+            public void Should_Set_ThrowOnWarning_By_Default()
+            {
+                // Given, When
+                var settings = new SvnExportSettings();
+
+                // Then
+                Assert.False(settings.ThrowOnWarning);
+            }
         }
     }
 }

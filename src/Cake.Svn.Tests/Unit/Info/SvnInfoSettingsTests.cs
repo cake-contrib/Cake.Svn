@@ -8,13 +8,13 @@ namespace Cake.Svn.Tests.Unit.Export
         public sealed class TheConstructor
         {
             [Fact]
-            public void Should_Set_Infity_Depth_By_Default()
+            public void Should_Set_Empty_Depth_By_Default()
             {
                 // Given, When
                 var settings = new SvnInfoSettings();
 
                 // Then
-                Assert.Equal(SvnDepth.Infinity, settings.Depth);
+                Assert.Equal(SvnDepth.Empty, settings.Depth);
             }
 
             [Fact]
@@ -48,13 +48,43 @@ namespace Cake.Svn.Tests.Unit.Export
             }
 
             [Fact]
-            public void Should_Set_Revision_Minus_One_By_Default()
+            public void Should_Set_Revision_To_Null_By_Default()
             {
                 // Given, When
                 var settings = new SvnInfoSettings();
 
                 // Then
-                Assert.Equal(-1, settings.Revision);
+                Assert.Null(settings.Revision);
+            }
+
+            [Fact]
+            public void Should_Set_ThrowOnCancel_By_Default()
+            {
+                // Given, When
+                var settings = new SvnInfoSettings();
+
+                // Then
+                Assert.True(settings.ThrowOnCancel);
+            }
+
+            [Fact]
+            public void Should_Set_ThrowOnError_By_Default()
+            {
+                // Given, When
+                var settings = new SvnInfoSettings();
+
+                // Then
+                Assert.True(settings.ThrowOnError);
+            }
+
+            [Fact]
+            public void Should_Set_ThrowOnWarning_By_Default()
+            {
+                // Given, When
+                var settings = new SvnInfoSettings();
+
+                // Then
+                Assert.False(settings.ThrowOnWarning);
             }
         }
     }

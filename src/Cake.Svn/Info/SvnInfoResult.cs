@@ -21,8 +21,8 @@ namespace Cake.Svn.Info
         /// <param name="fullPath">The path in a normalized format.</param>
         /// <param name="nodeKind">The kind of the Subversion node.</param>
         public SvnInfoResult(
-            Guid repositoryId, 
-            Uri repositoryRoot, 
+            Guid repositoryId,
+            Uri repositoryRoot,
             string lastChangedAuthor,
             long revision,
             Uri uri,
@@ -31,10 +31,8 @@ namespace Cake.Svn.Info
             SvnKind nodeKind)
         {
             repositoryRoot.NotNull(nameof(repositoryRoot));
-            lastChangedAuthor.NotNull(nameof(lastChangedAuthor));
             uri.NotNull(nameof(uri));
             path.NotNull(nameof(path));
-            fullPath.NotNull(nameof(fullPath));
 
             RepositoryId = repositoryId;
             RepositoryRoot = repositoryRoot;

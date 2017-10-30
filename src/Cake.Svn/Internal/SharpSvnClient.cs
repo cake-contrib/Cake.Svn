@@ -117,7 +117,7 @@ namespace Cake.Svn.Internal
                         eventArg.Revision,
                         eventArg.Uri,
                         eventArg.Path,
-                        eventArg.FullPath ?? string.Empty,
+                        eventArg.FullPath,
                         eventArg.NodeKind.ToSvnKind())).ToList();
         }
     }
