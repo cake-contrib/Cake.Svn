@@ -107,7 +107,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -119,6 +119,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -133,8 +140,12 @@
 			<li class="header">Property Members</li>
 				<li><a href="/Cake.Svn/api/Cake.Svn/ISvnClient/39C976C0">Trust<wbr>Server<wbr>Certificate</a></li>
 			<li class="header">Method Members</li>
+				<li><a href="/Cake.Svn/api/Cake.Svn/ISvnClient/10BBCA71">Add<wbr>(string, <wbr>SvnAddSettings)<wbr></a></li>
+				<li><a href="/Cake.Svn/api/Cake.Svn/ISvnClient/28538ECE">Delete<wbr>(string, <wbr>SvnDeleteSettings)<wbr></a></li>
 				<li><a href="/Cake.Svn/api/Cake.Svn/ISvnClient/CFB883DD">Export<wbr>(string, <wbr>string, <wbr>SvnExportSettings)<wbr></a></li>
 				<li class="selected"><a href="/Cake.Svn/api/Cake.Svn/ISvnClient/D52688A2">ForceCredentials<wbr>(SvnCredentials)<wbr></a></li>
+				<li><a href="/Cake.Svn/api/Cake.Svn/ISvnClient/43F2D305">GetInfo<wbr>(string, <wbr>SvnInfoSettings)<wbr></a></li>
+				<li><a href="/Cake.Svn/api/Cake.Svn/ISvnClient/40B15993">IsWorkingCopy<wbr>(string)<wbr></a></li>
 
 
                     </ul>

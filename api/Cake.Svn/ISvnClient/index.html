@@ -107,7 +107,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -119,6 +119,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -136,6 +143,7 @@
 				<li><a href="/Cake.Svn/api/Cake.Svn/SvnTool_1">SvnTool<wbr>&lt;TSettings&gt;<wbr></a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/Cake.Svn/api/Cake.Svn/SvnDepth">SvnDepth</a></li>
+				<li><a href="/Cake.Svn/api/Cake.Svn/SvnKind">SvnKind</a></li>
 				<li><a href="/Cake.Svn/api/Cake.Svn/SvnLineStyle">SvnLineStyle</a></li>
 			<li class="header">Interface Types</li>
 				<li class="selected"><a href="/Cake.Svn/api/Cake.Svn/ISvnClient">ISvnClient</a></li>
@@ -243,6 +251,24 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/Cake.Svn/api/Cake.Svn/ISvnClient/10BBCA71">Add<wbr>(string, <wbr>SvnAddSettings)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Add a file or a directory to Subversion.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Svn/api/Cake.Svn/ISvnClient/28538ECE">Delete<wbr>(string, <wbr>SvnDeleteSettings)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Remove a file or a directory from Subversion.
+    </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/Cake.Svn/api/Cake.Svn/ISvnClient/CFB883DD">Export<wbr>(string, <wbr>string, <wbr>SvnExportSettings)<wbr></a></td>
 								<td><a href="/Cake.Svn/api/Cake.Svn.Export/SvnExportResult">SvnExportResult</a></td>
 								<td>
@@ -257,6 +283,24 @@ class Type type-node
 								<td>
 									<div>
     Defines credentials to use for connecting to the repository.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Svn/api/Cake.Svn/ISvnClient/43F2D305">GetInfo<wbr>(string, <wbr>SvnInfoSettings)<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
+								<td>
+									<div>
+    Gets Subversion information about the file or directory at <span name="fileOrDirectoryPath" class="paramref">fileOrDirectoryPath</span> (local or remote).
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Svn/api/Cake.Svn/ISvnClient/40B15993">IsWorkingCopy<wbr>(string)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets the information whether the <span name="fileOrDirectoryPath" class="paramref">fileOrDirectoryPath</span> is a working copy or not.
     </div>
 								</td>
 							</tr>

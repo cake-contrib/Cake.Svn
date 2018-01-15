@@ -105,7 +105,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -117,6 +117,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 
 
@@ -158,15 +165,23 @@
 									<td></td>
 							</tr>
 							<tr>
+								<td><a href="/Cake.Svn/api/Cake.Svn.Add">Cake<wbr>.Svn<wbr>.Add</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Svn/api/Cake.Svn.Delete">Cake<wbr>.Svn<wbr>.Delete</a></td>
+									<td></td>
+							</tr>
+							<tr>
 								<td><a href="/Cake.Svn/api/Cake.Svn.Export">Cake<wbr>.Svn<wbr>.Export</a></td>
 									<td></td>
 							</tr>
 							<tr>
-								<td><a href="/Cake.Svn/api/Cake.Svn.Internal">Cake<wbr>.Svn<wbr>.Internal</a></td>
+								<td><a href="/Cake.Svn/api/Cake.Svn.Info">Cake<wbr>.Svn<wbr>.Info</a></td>
 									<td></td>
 							</tr>
 							<tr>
-								<td><a href="/Cake.Svn/api/Cake.Svn.Internal.Extensions">Cake<wbr>.Svn<wbr>.Internal<wbr>.Extensions</a></td>
+								<td><a href="/Cake.Svn/api/Cake.Svn.Internal">Cake<wbr>.Svn<wbr>.Internal</a></td>
 									<td></td>
 							</tr>
 					</table>

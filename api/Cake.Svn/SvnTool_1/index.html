@@ -108,7 +108,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -120,6 +120,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -137,6 +144,7 @@
 				<li class="selected"><a href="/Cake.Svn/api/Cake.Svn/SvnTool_1">SvnTool<wbr>&lt;TSettings&gt;<wbr></a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/Cake.Svn/api/Cake.Svn/SvnDepth">SvnDepth</a></li>
+				<li><a href="/Cake.Svn/api/Cake.Svn/SvnKind">SvnKind</a></li>
 				<li><a href="/Cake.Svn/api/Cake.Svn/SvnLineStyle">SvnLineStyle</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/Cake.Svn/api/Cake.Svn/ISvnClient">ISvnClient</a></li>
@@ -180,6 +188,15 @@
 									</ul>
 								</dd>				
 							
+								<dt>Derived Types</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/Cake.Svn/api/Cake.Svn.Delete/SvnDeleter">SvnDeleter</a></li>								
+											<li><a href="/Cake.Svn/api/Cake.Svn.Add/SvnAdder">SvnAdder</a></li>								
+											<li><a href="/Cake.Svn/api/Cake.Svn.Info/SvnInfo">SvnInfo</a></li>								
+											<li><a href="/Cake.Svn/api/Cake.Svn.Export/SvnExporter">SvnExporter</a></li>								
+									</ul>
+								</dd>			
 							
 						</dl>
 					</div>		
@@ -189,6 +206,14 @@
 	Base0["object"]--&gt;Type
 	Type["SvnTool&lt;TSettings&gt;"]
 class Type type-node
+	Type--&gt;Derived0["SvnDeleter"]
+	click Derived0 "/Cake.Svn/api/Cake.Svn.Delete/SvnDeleter"
+	Type--&gt;Derived1["SvnAdder"]
+	click Derived1 "/Cake.Svn/api/Cake.Svn.Add/SvnAdder"
+	Type--&gt;Derived2["SvnInfo"]
+	click Derived2 "/Cake.Svn/api/Cake.Svn.Info/SvnInfo"
+	Type--&gt;Derived3["SvnExporter"]
+	click Derived3 "/Cake.Svn/api/Cake.Svn.Export/SvnExporter"
 
 						</div>
 					</div>

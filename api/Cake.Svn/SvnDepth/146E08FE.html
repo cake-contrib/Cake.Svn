@@ -106,7 +106,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -118,6 +118,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -134,6 +141,7 @@
 				<li><a href="/Cake.Svn/api/Cake.Svn/SvnDepth/1EFE5C52">Files</a></li>
 				<li><a href="/Cake.Svn/api/Cake.Svn/SvnDepth/E6953879">Immediates</a></li>
 				<li class="selected"><a href="/Cake.Svn/api/Cake.Svn/SvnDepth/146E08FE">Infinity</a></li>
+				<li><a href="/Cake.Svn/api/Cake.Svn/SvnDepth/E7B4C73E">Unknown</a></li>
 
 
                     </ul>

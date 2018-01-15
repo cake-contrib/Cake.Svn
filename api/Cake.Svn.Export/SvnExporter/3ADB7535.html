@@ -107,7 +107,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -119,6 +119,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -134,6 +141,7 @@
 				<li class="selected"><a href="/Cake.Svn/api/Cake.Svn.Export/SvnExporter/3ADB7535">SvnExporter<wbr>(ICakeEnvironment, <wbr>Func<wbr>&lt;ISvnClient&gt;<wbr>)<wbr></a></li>
 			<li class="header">Method Members</li>
 				<li><a href="/Cake.Svn/api/Cake.Svn.Export/SvnExporter/10363321">Export<wbr>(Uri, <wbr>DirectoryPath, <wbr>SvnExportSettings)<wbr></a></li>
+				<li><a href="/Cake.Svn/api/Cake.Svn/SvnTool_1/6CDAC620">GetClient<wbr>()<wbr></a></li>
 
 
                     </ul>
@@ -197,7 +205,7 @@
 					</tr>
 					<tr>
 						<td>clientFactoryMethod</td>
-						<td>Func<wbr>&lt;ISvnClient&gt;<wbr></td>
+						<td>Func<wbr>&lt;TResult&gt;<wbr></td>
 						<td>Method to use to initialize a Subversion client.</td>
 					</tr>
 			</tbody></table>

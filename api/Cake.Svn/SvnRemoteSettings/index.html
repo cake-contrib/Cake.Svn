@@ -106,7 +106,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -118,6 +118,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -135,6 +142,7 @@
 				<li><a href="/Cake.Svn/api/Cake.Svn/SvnTool_1">SvnTool<wbr>&lt;TSettings&gt;<wbr></a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/Cake.Svn/api/Cake.Svn/SvnDepth">SvnDepth</a></li>
+				<li><a href="/Cake.Svn/api/Cake.Svn/SvnKind">SvnKind</a></li>
 				<li><a href="/Cake.Svn/api/Cake.Svn/SvnLineStyle">SvnLineStyle</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/Cake.Svn/api/Cake.Svn/ISvnClient">ISvnClient</a></li>
@@ -182,6 +190,7 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/Cake.Svn/api/Cake.Svn.Info/SvnInfoSettings">SvnInfoSettings</a></li>								
 											<li><a href="/Cake.Svn/api/Cake.Svn.Export/SvnExportSettings">SvnExportSettings</a></li>								
 									</ul>
 								</dd>			
@@ -196,8 +205,10 @@
 	Base1["object"]--&gt;Base0
 	Type["SvnRemoteSettings"]
 class Type type-node
-	Type--&gt;Derived0["SvnExportSettings"]
-	click Derived0 "/Cake.Svn/api/Cake.Svn.Export/SvnExportSettings"
+	Type--&gt;Derived0["SvnInfoSettings"]
+	click Derived0 "/Cake.Svn/api/Cake.Svn.Info/SvnInfoSettings"
+	Type--&gt;Derived1["SvnExportSettings"]
+	click Derived1 "/Cake.Svn/api/Cake.Svn.Export/SvnExportSettings"
 
 						</div>
 					</div>
@@ -243,6 +254,39 @@ class Type type-node
 									<div>
     Gets or sets a value indicating whether insecure SSL certificates should be ignored or not.
     </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Svn/api/Cake.Svn/SvnSettings/43A71546">ThrowOnCancel</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether the call must throw an error if the 
+    operation is canceled. Defaults to true.
+    </div>
+											<div><small><em>Inherited from <a href="/Cake.Svn/api/Cake.Svn/SvnSettings">SvnSettings</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Svn/api/Cake.Svn/SvnSettings/EBD7C584">ThrowOnError</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether the call must throw an error if an
+    error occurs. Defaults to true.
+    </div>
+											<div><small><em>Inherited from <a href="/Cake.Svn/api/Cake.Svn/SvnSettings">SvnSettings</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Svn/api/Cake.Svn/SvnSettings/9E9F8011">ThrowOnWarning</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether the call must throw an error if a non
+    fatal error occurs. Defaults to false.
+    </div>
+											<div><small><em>Inherited from <a href="/Cake.Svn/api/Cake.Svn/SvnSettings">SvnSettings</a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

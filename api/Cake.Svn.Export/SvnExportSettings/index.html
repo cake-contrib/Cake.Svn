@@ -107,7 +107,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -119,6 +119,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -308,6 +315,39 @@ class Type type-node
 									<div>
     Gets or sets the revision on with which to operate.
     </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Svn/api/Cake.Svn/SvnSettings/43A71546">ThrowOnCancel</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether the call must throw an error if the 
+    operation is canceled. Defaults to true.
+    </div>
+											<div><small><em>Inherited from <a href="/Cake.Svn/api/Cake.Svn/SvnSettings">SvnSettings</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Svn/api/Cake.Svn/SvnSettings/EBD7C584">ThrowOnError</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether the call must throw an error if an
+    error occurs. Defaults to true.
+    </div>
+											<div><small><em>Inherited from <a href="/Cake.Svn/api/Cake.Svn/SvnSettings">SvnSettings</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Svn/api/Cake.Svn/SvnSettings/9E9F8011">ThrowOnWarning</a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Gets or sets a value indicating whether the call must throw an error if a non
+    fatal error occurs. Defaults to false.
+    </div>
+											<div><small><em>Inherited from <a href="/Cake.Svn/api/Cake.Svn/SvnSettings">SvnSettings</a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>
