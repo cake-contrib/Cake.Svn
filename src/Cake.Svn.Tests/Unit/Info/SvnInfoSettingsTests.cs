@@ -1,7 +1,7 @@
 ﻿using Cake.Svn.Info;
 using Xunit;
 
-namespace Cake.Svn.Tests.Unit.Export
+namespace Cake.Svn.Tests.Unit.Info
 {
     public sealed class SvnInfoSettingsTests
     {
