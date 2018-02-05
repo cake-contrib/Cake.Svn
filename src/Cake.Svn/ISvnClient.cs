@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Cake.Core.IO;
 using Cake.Svn.Add;
+using Cake.Svn.Checkout;
 using Cake.Svn.Delete;
 using Cake.Svn.Export;
 using Cake.Svn.Info;
@@ -24,6 +25,15 @@ namespace Cake.Svn
         /// </summary>
         /// <param name="credentials">Credentials to use for connecting to the repository.</param>
         void ForceCredentials(SvnCredentials credentials);
+
+        /// <summary>
+        /// Checkout a Subversion directory tree
+        /// </summary>
+        /// <param name="from">URL of remote repository</param>
+        /// <param name="to">Path to the local directory where the directory tree should be checked out to.</param>
+        /// <param name="settings">Settings to use.</param>
+        /// <returns>Result of the export operation.</returns>
+        SvnCheckoutResult Checkout(string from, string to, SvnCheckoutSettings settings);
 
         /// <summary>
         /// Export a Subversion directory tree.
