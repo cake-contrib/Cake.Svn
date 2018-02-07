@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using Cake.Svn.Add;
+using Cake.Svn.Checkout;
 using Cake.Svn.Delete;
 using Cake.Svn.Export;
 using Cake.Svn.Info;
@@ -74,6 +75,15 @@ namespace Cake.Svn.Internal
             args.Save = false;
         }
 
+        public SvnCheckoutResult Checkout(string from, string to, SvnCheckoutSettings settings)
+        {
+            var arguments = settings.ToSharpSvn();
+            SharpSvn.SvnUpdateResult result;
+            CheckOut(SvnUriTarget.FromString(from), to, arguments, out result);
+
+            return new SvnCheckoutResult(result.Revision);
+        }
+
         public SvnExportResult Export(string from, string to, SvnExportSettings settings)
         {
             var arguments = settings.ToSharpSvn();
@@ -109,7 +119,7 @@ namespace Cake.Svn.Internal
             GetInfo(repositoryUrl, settings.ToSvnInfoArgs(), out eventArgs);
 
             return 
-                (from eventArg in eventArgs
+                (from eventArg in eventArgs 
                     select new SvnInfoResult(
                         eventArg.RepositoryId,
                         eventArg.RepositoryRoot,

@@ -108,6 +108,11 @@
     <Compile Include="SvnRemoteSettings.cs" />
     <Compile Include="SvnSettings.cs" />
     <Compile Include="SvnTool.cs" />
+    <Compile Include="Checkout\SvnCheckouter.cs" />
+    <Compile Include="Checkout\SvnCheckoutSettings.cs" />
+    <Compile Include="Checkout\SvnCheckoutSettingsExtensions.cs" />
+    <Compile Include="Checkout\SvnCheckoutResult.cs" />
+    <Compile Include="SvnAliases.Checkout.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SvnAliases.Export.cs" />

@@ -1,57 +1,47 @@
-﻿using Cake.Svn.Info;
+using Cake.Svn.Checkout;
 using Xunit;
 
-namespace Cake.Svn.Tests.Unit.Info
+namespace Cake.Svn.Tests.Unit.Checkout
 {
-    public sealed class SvnInfoSettingsTests
+    public sealed class SvnCheckoutSettingsTests
     {
         public sealed class TheConstructor
         {
             [Fact]
-            public void Should_Set_Empty_Depth_By_Default()
+            public void Should_Set_Infity_Depth_By_Default()
             {
                 // Given, When
-                var settings = new SvnInfoSettings();
+                var settings = new SvnCheckoutSettings();
 
                 // Then
-                Assert.Equal(SvnDepth.Empty, settings.Depth);
+                Assert.Equal(SvnDepth.Infinity, settings.Depth);
             }
 
             [Fact]
-            public void Should_RetrieveActualOnly_By_Default()
+            public void Should_Ignore_Externals_By_Default()
             {
                 // Given, When
-                var settings = new SvnInfoSettings();
+                var settings = new SvnCheckoutSettings();
 
                 // Then
-                Assert.True(settings.RetrieveActualOnly);
+                Assert.True(settings.IgnoreExternals);
             }
 
             [Fact]
-            public void Should_RetrieveExcluded_By_Default()
+            public void Should_Not_Overwrite_By_Default()
             {
                 // Given, When
-                var settings = new SvnInfoSettings();
+                var settings = new SvnCheckoutSettings();
 
                 // Then
-                Assert.True(settings.RetrieveExcluded);
+                Assert.False(settings.AllowObstructions);
             }
 
             [Fact]
-            public void Should_Not_IncludeExternals_By_Default()
+            public void Should_Set_Head_Revision_By_Default()
             {
                 // Given, When
-                var settings = new SvnInfoSettings();
-
-                // Then
-                Assert.False(settings.IncludeExternals);
-            }
-
-            [Fact]
-            public void Should_Set_Revision_To_Null_By_Default()
-            {
-                // Given, When
-                var settings = new SvnInfoSettings();
+                var settings = new SvnCheckoutSettings();
 
                 // Then
                 Assert.Null(settings.Revision);
@@ -61,7 +51,7 @@ namespace Cake.Svn.Tests.Unit.Info
             public void Should_Set_ThrowOnCancel_By_Default()
             {
                 // Given, When
-                var settings = new SvnInfoSettings();
+                var settings = new SvnCheckoutSettings();
 
                 // Then
                 Assert.True(settings.ThrowOnCancel);
@@ -71,7 +61,7 @@ namespace Cake.Svn.Tests.Unit.Info
             public void Should_Set_ThrowOnError_By_Default()
             {
                 // Given, When
-                var settings = new SvnInfoSettings();
+                var settings = new SvnCheckoutSettings();
 
                 // Then
                 Assert.True(settings.ThrowOnError);
@@ -81,7 +71,7 @@ namespace Cake.Svn.Tests.Unit.Info
             public void Should_Set_ThrowOnWarning_By_Default()
             {
                 // Given, When
-                var settings = new SvnInfoSettings();
+                var settings = new SvnCheckoutSettings();
 
                 // Then
                 Assert.False(settings.ThrowOnWarning);
