@@ -6,11 +6,11 @@
 using System.Reflection;
 using System;
 
-[assembly: AssemblyCompany("Martin Björkström")]
+[assembly: AssemblyCompany("Martin Björkström, Pascal Berger and contributors")]
 [assembly: AssemblyProduct("Cake.Svn")]
 [assembly: AssemblyVersion("0.0.1")]
 [assembly: AssemblyFileVersion("0.0.1")]
 [assembly: AssemblyInformationalVersion("0.0.1")]
-[assembly: AssemblyCopyright("Copyright © Martin Björkström 2017")]
+[assembly: AssemblyCopyright("Copyright © 2018 Cake.Svn contributors")]
 [assembly: CLSCompliant(true)]
 
