@@ -51,8 +51,8 @@
     <DocumentationFile>bin\Release\Cake.Svn.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cake.Core, Version=0.26.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Cake.Core.0.26.0\lib\net46\Cake.Core.dll</HintPath>
+    <Reference Include="Cake.Core, Version=0.28.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Cake.Core.0.28.0\lib\net46\Cake.Core.dll</HintPath>
     </Reference>
     <Reference Include="SharpSvn, Version=1.9007.3987.251, Culture=neutral, PublicKeyToken=d729672594885a28, processorArchitecture=AMD64">
       <HintPath>..\packages\SharpSvn.1.9-x64.1.9007.3987.251\lib\net40\SharpSvn.dll</HintPath>
