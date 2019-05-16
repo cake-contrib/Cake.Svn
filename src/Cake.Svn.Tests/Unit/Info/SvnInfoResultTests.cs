@@ -126,6 +126,16 @@ namespace Cake.Svn.Tests.Unit.Info
             }
 
             [Fact]
+            public void Should_Return_Correct_LastChangedRevision_If_SvnInfoResult_CreatedSuccesful()
+            {
+                // Given
+                var testSvnInfoResult = GetSvnInfoResultFromParameterList(new TestSvnInfoResult());
+
+                // Then
+                Assert.Equal(1235, testSvnInfoResult.LastChangedRevision);
+            }
+
+            [Fact]
             public void Should_Return_Correct_NodeUri_If_SvnInfoResult_CreatedSuccesful()
             {
                 // Given
@@ -172,6 +182,7 @@ namespace Cake.Svn.Tests.Unit.Info
                     infoResult.RepositoryRoot,
                     infoResult.LastChangedAuthor,
                     infoResult.Revision,
+                    infoResult.LastChangedRevision,
                     infoResult.Uri,
                     infoResult.Path,
                     infoResult.FullPath,
@@ -186,6 +197,7 @@ namespace Cake.Svn.Tests.Unit.Info
                     RepositoryRoot = new Uri("https://svn.example.com/");
                     LastChangedAuthor = "administrator";
                     Revision = 1234;
+                    LastChangedRevision = 1235;
                     Uri = new Uri("https://svn.example.com/");
                     Path = @"src/folder/file.cs";
                     FullPath = @"https://svn.example.com/src/folder/file.cs";
@@ -196,6 +208,7 @@ namespace Cake.Svn.Tests.Unit.Info
                 internal Uri RepositoryRoot;
                 internal string LastChangedAuthor;
                 internal long Revision;
+                internal long LastChangedRevision;
                 internal Uri Uri;
                 internal string Path;
                 internal string FullPath;
