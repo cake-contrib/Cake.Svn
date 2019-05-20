@@ -125,6 +125,7 @@ namespace Cake.Svn.Internal
                         eventArg.RepositoryRoot,
                         eventArg.LastChangeAuthor,
                         eventArg.Revision,
+                        eventArg.LastChangeRevision,
                         eventArg.Uri,
                         eventArg.Path,
                         eventArg.FullPath,
