@@ -15,6 +15,7 @@ namespace Cake.Svn.Info
         /// <param name="repositoryRoot">The repository root Uri.</param>
         /// <param name="lastChangedAuthor">The author of the last revision.</param>
         /// <param name="revision">The revision of the node.</param>
+        /// <param name="lastChangedRevision">The last changed revision of the node.</param>
         /// <param name="uri">The full Uri of the node.</param>
         /// <param name="path">The path of the file. The local path if requisting working version, 
         /// otherwise the name of the file at the specified version.</param>
@@ -25,6 +26,7 @@ namespace Cake.Svn.Info
             Uri repositoryRoot,
             string lastChangedAuthor,
             long revision,
+            long lastChangedRevision,
             Uri uri,
             string path,
             string fullPath,
@@ -37,6 +39,7 @@ namespace Cake.Svn.Info
             RepositoryId = repositoryId;
             RepositoryRoot = repositoryRoot;
             LastChangedAuthor = lastChangedAuthor;
+            LastChangedRevision = lastChangedRevision;
             Revision = revision;
             Uri = uri;
             Path = path;
@@ -63,6 +66,11 @@ namespace Cake.Svn.Info
         /// Gets The revision of the node item.
         /// </summary>
         public long Revision { get; }
+
+        /// <summary>
+        /// Gets the last changed revision of the node item.
+        /// </summary>
+        public long LastChangedRevision { get; }
 
         /// <summary>
         /// Gets the full Uri of the node.
