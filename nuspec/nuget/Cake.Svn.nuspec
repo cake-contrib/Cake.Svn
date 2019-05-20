@@ -17,7 +17,7 @@ Addin that extends the Cake build automation system with Subversion features usi
     <repository type="git" url="https://github.com/cake-contrib/Cake.Svn"/>
     <copyright>Copyright © 2018 Cake.Svn contributors</copyright>
     <tags>Cake Script Subversion</tags>
-    <releaseNotes>https://github.com/cake-contrib/Cake.Svn/releases/tag/0.5.0</releaseNotes>
+    <releaseNotes>https://github.com/cake-contrib/Cake.Svn/releases/tag/0.6.0</releaseNotes>
   </metadata>
   <files>
     <file src="Cake.Svn.dll" target="lib\net46" />
