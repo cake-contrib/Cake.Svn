@@ -166,6 +166,7 @@
     <Compile Include="Fixtures\Add\SvnAdderFixture.cs" />
     <Compile Include="Fixtures\Export\SvnExporterFixture.cs" />
     <Compile Include="Fixtures\Info\SvnInfoFixture.cs" />
+    <Compile Include="Fixtures\Update\SvnUpdaterFixture.cs" />
     <Compile Include="Internal\Extensions\CheckArgumentExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unit\Delete\SvnDeleterTests.cs" />
@@ -180,6 +181,8 @@
     <Compile Include="Fixtures\Checkout\SvnCheckouterFixture.cs" />
     <Compile Include="Unit\Checkout\SvnCheckouterTests.cs" />
     <Compile Include="Unit\Checkout\SvnCheckoutSettingsTests.cs" />
+    <Compile Include="Unit\Update\SvnUpdaterTests.cs" />
+    <Compile Include="Unit\Update\SvnUpdateSettingsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">

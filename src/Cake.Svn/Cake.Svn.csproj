@@ -99,6 +99,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SvnAliases.Info.cs" />
     <Compile Include="SvnAliases.Delete.cs" />
+    <Compile Include="SvnAliases.Update.cs" />
     <Compile Include="SvnCredentials.cs" />
     <Compile Include="SvnClientArgsExtensions.cs" />
     <Compile Include="SvnKind.cs" />
@@ -112,6 +113,10 @@
     <Compile Include="Checkout\SvnCheckoutSettingsExtensions.cs" />
     <Compile Include="Checkout\SvnCheckoutResult.cs" />
     <Compile Include="SvnAliases.Checkout.cs" />
+    <Compile Include="Update\SvnUpdater.cs" />
+    <Compile Include="Update\SvnUpdateResult.cs" />
+    <Compile Include="Update\SvnUpdateSettings.cs" />
+    <Compile Include="Update\SvnUpdateSettingsExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SvnAliases.Export.cs" />

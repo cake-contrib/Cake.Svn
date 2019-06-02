@@ -33,5 +33,17 @@ namespace Cake.Svn
         {
             return _clientFactoryMethod();
         }
+
+        /// <summary>
+        /// Checks the setting parameter is not null and throws an exception if it is.
+        /// </summary>
+        protected void CheckSettingsIsNotNull(SvnRemoteSettings settings)
+        {
+            if (settings == null)
+            {
+                throw new ArgumentNullException(nameof(settings));
+            }
+
+        }
     }
 }
