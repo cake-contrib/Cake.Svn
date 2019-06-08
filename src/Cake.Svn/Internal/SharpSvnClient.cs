@@ -8,6 +8,7 @@ using Cake.Svn.Delete;
 using Cake.Svn.Export;
 using Cake.Svn.Info;
 using Cake.Svn.Internal.Extensions;
+using Cake.Svn.Update;
 using SharpSvn;
 using SharpSvn.Security;
 
@@ -130,6 +131,14 @@ namespace Cake.Svn.Internal
                         eventArg.Path,
                         eventArg.FullPath,
                         eventArg.NodeKind.ToSvnKind())).ToList();
+        }
+
+        /// <inheritdoc/>
+        public Update.SvnUpdateResult Update(string fileOrDirectoryPath, SvnUpdateSettings settings)
+        {
+            SharpSvn.SvnUpdateResult result;
+            Update(fileOrDirectoryPath, settings.ToSvnUpdateArgs(), out result);
+            return new Update.SvnUpdateResult(result.Revision);
         }
     }
 }

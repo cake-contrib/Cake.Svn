@@ -7,6 +7,7 @@ using Cake.Svn.Checkout;
 using Cake.Svn.Delete;
 using Cake.Svn.Export;
 using Cake.Svn.Info;
+using Cake.Svn.Update;
 
 namespace Cake.Svn
 {
@@ -77,5 +78,13 @@ namespace Cake.Svn
         /// <param name="settings">The settings.</param>
         /// <returns>An information result about the Subversion repository.</returns>
         IEnumerable<SvnInfoResult> GetInfo(string fileOrDirectoryPath, SvnInfoSettings settings);
+
+        /// <summary>
+        /// Update a Subversion directory tree.
+        /// </summary>
+        /// <param name="fileOrDirectoryPath">The path to the local file or directory.</param>
+        /// <param name="settings">Settings to use.</param>
+        /// <returns>Result of the export operation.</returns>
+        SvnUpdateResult Update(string fileOrDirectoryPath, SvnUpdateSettings settings);
     }
 }
