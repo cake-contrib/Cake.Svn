@@ -58,6 +58,7 @@
     <Compile Include="..\SolutionInfo.cs">
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
+    <Compile Include="Fixtures\CleanUp\SvnCleanUpFixture.cs" />
     <Compile Include="Fixtures\Delete\SvnDeleterFixture.cs" />
     <Compile Include="Fixtures\Add\SvnAdderFixture.cs" />
     <Compile Include="Fixtures\Export\SvnExporterFixture.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Fixtures\Update\SvnUpdaterFixture.cs" />
     <Compile Include="Internal\Extensions\CheckArgumentExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unit\CleanUp\SvnCleanUpSettingsTests.cs" />
     <Compile Include="Unit\Delete\SvnDeleterTests.cs" />
     <Compile Include="Unit\Delete\SvnDeleteSettingsTests..cs" />
     <Compile Include="Unit\Add\SvnAdderTests.cs" />
