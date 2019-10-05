@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using Cake.Svn.Add;
 using Cake.Svn.Checkout;
+using Cake.Svn.CleanUp;
 using Cake.Svn.Delete;
 using Cake.Svn.Export;
 using Cake.Svn.Info;
@@ -139,6 +140,12 @@ namespace Cake.Svn.Internal
             SharpSvn.SvnUpdateResult result;
             Update(fileOrDirectoryPath, settings.ToSvnUpdateArgs(), out result);
             return new Update.SvnUpdateResult(result.Revision);
+        }
+
+        /// <inheritdoc/>
+        public bool CleanUp( string directoryPath, SvnCleanUpSettings settings )
+        {
+            return CleanUp( directoryPath, settings.ToSvnCleanUpArgs() );
         }
     }
 }
