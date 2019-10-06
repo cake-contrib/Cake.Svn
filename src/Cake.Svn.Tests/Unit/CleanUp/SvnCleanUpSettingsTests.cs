@@ -5,6 +5,11 @@ namespace Cake.Svn.Tests.Unit.CleanUp
 {
     public sealed class SvnCleanUpSettingsTests
     {
+        /// <summary>
+        /// Ensures the constructor sets the the settings
+        /// to the correct defaults, which are the same defaults
+        /// that SharpSVN uses.
+        /// </summary>
         public sealed class TheConstructor
         {
             [Fact]

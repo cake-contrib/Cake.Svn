@@ -37,9 +37,13 @@ namespace Cake.Svn.CleanUp
         /// </returns>
         public bool CleanUp( DirectoryPath path, SvnCleanUpSettings settings )
         {
+            path.NotNull( nameof( path ) );
+            settings.NotNull( nameof( settings ) );
+
             using ( var client = GetClient() )
             {
-                return client.CleanUp( path.MakeAbsolute( this._environment ).ToString(), settings );
+                string pathStr = path.MakeAbsolute( this._environment ).ToString();
+                return client.CleanUp( pathStr, settings );
             }
         }
     }

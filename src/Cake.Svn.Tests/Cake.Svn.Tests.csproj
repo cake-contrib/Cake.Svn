@@ -66,6 +66,7 @@
     <Compile Include="Fixtures\Update\SvnUpdaterFixture.cs" />
     <Compile Include="Internal\Extensions\CheckArgumentExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unit\CleanUp\SvnCleanUperTests.cs" />
     <Compile Include="Unit\CleanUp\SvnCleanUpSettingsTests.cs" />
     <Compile Include="Unit\Delete\SvnDeleterTests.cs" />
     <Compile Include="Unit\Delete\SvnDeleteSettingsTests..cs" />
