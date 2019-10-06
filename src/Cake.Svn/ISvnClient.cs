@@ -4,6 +4,7 @@ using System.IO;
 using Cake.Core.IO;
 using Cake.Svn.Add;
 using Cake.Svn.Checkout;
+using Cake.Svn.CleanUp;
 using Cake.Svn.Delete;
 using Cake.Svn.Export;
 using Cake.Svn.Info;
@@ -86,5 +87,13 @@ namespace Cake.Svn
         /// <param name="settings">Settings to use.</param>
         /// <returns>Result of the export operation.</returns>
         SvnUpdateResult Update(string fileOrDirectoryPath, SvnUpdateSettings settings);
+
+        /// <summary>
+        /// Cleans up the directory with an SVN working copy.
+        /// </summary>
+        /// <param name="directoryPath">The path in the working copy to clean up.</param>
+        /// <param name="settings">Settings to use.</param>
+        /// <returns><c>true</c> if the command was successful. Otherwise <c>false</c> will be returned.</returns>
+        bool CleanUp(string directoryPath, SvnCleanUpSettings settings);
     }
 }

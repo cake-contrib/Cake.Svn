@@ -55,6 +55,9 @@
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
     <Compile Include="Add\SvnAddSettingsExtensions.cs" />
+    <Compile Include="CleanUp\SvnCleaner.cs" />
+    <Compile Include="CleanUp\SvnCleanUpSettings.cs" />
+    <Compile Include="CleanUp\SvnCleanUpSettingsExtensions.cs" />
     <Compile Include="Info\SvnInfo.cs" />
     <Compile Include="Info\SvnInfoResult.cs" />
     <Compile Include="Info\SvnInfoSettings.cs" />
@@ -76,6 +79,7 @@
     <Compile Include="Export\SvnExportSettings.cs" />
     <Compile Include="Export\SvnExportSettingsExtensions.cs" />
     <Compile Include="SvnAliases.Add.cs" />
+    <Compile Include="SvnAliases.CleanUp.cs" />
     <Compile Include="SvnAliases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SvnAliases.Info.cs" />
