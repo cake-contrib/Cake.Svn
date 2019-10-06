@@ -18,11 +18,11 @@ namespace Cake.Svn.CleanUp
         /// </summary>
         /// <param name="environment">The Cake environment.</param>
         /// <param name="clientFactoryMethod">Method to use to initialize a Subversion client.</param>
-        public SvnCleanUper( ICakeEnvironment environment, Func<ISvnClient> clientFactoryMethod )
-            : base( clientFactoryMethod )
+        public SvnCleanUper(ICakeEnvironment environment, Func<ISvnClient> clientFactoryMethod)
+            : base(clientFactoryMethod)
         {
-            environment.NotNull( nameof( environment ) );
-            clientFactoryMethod.NotNull( nameof( clientFactoryMethod ) );
+            environment.NotNull(nameof(environment));
+            clientFactoryMethod.NotNull(nameof(clientFactoryMethod));
 
             _environment = environment;
         }
@@ -35,15 +35,15 @@ namespace Cake.Svn.CleanUp
         /// <returns>
         /// <c>true</c> if the command was successful. Otherwise <c>false</c> will be returned.
         /// </returns>
-        public bool CleanUp( DirectoryPath path, SvnCleanUpSettings settings )
+        public bool CleanUp(DirectoryPath path, SvnCleanUpSettings settings)
         {
-            path.NotNull( nameof( path ) );
-            settings.NotNull( nameof( settings ) );
+            path.NotNull(nameof(path));
+            settings.NotNull(nameof(settings));
 
-            using ( var client = GetClient() )
+            using (var client = GetClient())
             {
-                string pathStr = path.MakeAbsolute( this._environment ).ToString();
-                return client.CleanUp( pathStr, settings );
+                string pathStr = path.MakeAbsolute(this._environment).ToString();
+                return client.CleanUp(pathStr, settings);
             }
         }
     }

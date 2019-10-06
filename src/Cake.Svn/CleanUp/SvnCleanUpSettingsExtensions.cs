@@ -5,11 +5,11 @@ namespace Cake.Svn.CleanUp
 {
     internal static class SvnCleanUpSettingsExtensions
     {
-        internal static SvnCleanUpArgs ToSvnCleanUpArgs( this SvnCleanUpSettings settings )
+        internal static SvnCleanUpArgs ToSvnCleanUpArgs(this SvnCleanUpSettings settings)
         {
-            settings.NotNull( nameof( settings ) );
+            settings.NotNull(nameof(settings));
 
-            return ( new SvnCleanUpArgs
+            return (new SvnCleanUpArgs
             {
                 BreakLocks = settings.BreakLocks,
                 ClearDavCache = settings.ClearDavCache,
@@ -17,7 +17,7 @@ namespace Cake.Svn.CleanUp
                 IncludeExternals = settings.IncludeExternals,
                 VacuumPristines = settings.VacuumPristines
             }
-            ).SetBaseSettings( settings );
+            ).SetBaseSettings(settings);
         }
     }
 }

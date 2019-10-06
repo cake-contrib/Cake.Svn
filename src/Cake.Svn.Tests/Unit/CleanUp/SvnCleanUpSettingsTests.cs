@@ -19,7 +19,7 @@ namespace Cake.Svn.Tests.Unit.CleanUp
                 var settings = new SvnCleanUpSettings();
 
                 // Then
-                Assert.True( settings.BreakLocks );
+                Assert.True(settings.BreakLocks);
             }
 
             [Fact]
@@ -29,7 +29,7 @@ namespace Cake.Svn.Tests.Unit.CleanUp
                 var settings = new SvnCleanUpSettings();
 
                 // Then
-                Assert.True( settings.ClearDavCache );
+                Assert.True(settings.ClearDavCache);
             }
 
             [Fact]
@@ -39,7 +39,7 @@ namespace Cake.Svn.Tests.Unit.CleanUp
                 var settings = new SvnCleanUpSettings();
 
                 // Then
-                Assert.True( settings.FixTimeStamps );
+                Assert.True(settings.FixTimeStamps );
             }
 
             [Fact]
@@ -49,7 +49,7 @@ namespace Cake.Svn.Tests.Unit.CleanUp
                 var settings = new SvnCleanUpSettings();
 
                 // Then
-                Assert.False( settings.IncludeExternals );
+                Assert.False(settings.IncludeExternals);
             }
 
             [Fact]
@@ -59,7 +59,7 @@ namespace Cake.Svn.Tests.Unit.CleanUp
                 var settings = new SvnCleanUpSettings();
 
                 // Then
-                Assert.True( settings.VacuumPristines );
+                Assert.True(settings.VacuumPristines);
             }
         }
     }

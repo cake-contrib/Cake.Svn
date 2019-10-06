@@ -25,13 +25,13 @@ namespace Cake.Svn.Tests.Fixtures.CleanUp
 
         internal SvnCleanUper CreateCleanUper()
         {
-            return new SvnCleanUper( Environment, GetSvnClient );
+            return new SvnCleanUper(Environment, GetSvnClient);
         }
 
         internal bool CleanUp()
         {
             var cleaner = CreateCleanUper();
-            return cleaner.CleanUp( DirectoryPath, Settings );
+            return cleaner.CleanUp(DirectoryPath, Settings);
         }
     }
 }

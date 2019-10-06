@@ -34,7 +34,7 @@ namespace Cake.Svn.Tests.Unit.CleanUp
 
                 // When
                 // Then
-                Assert.Throws<ArgumentNullException>( "environment", () => fixture.CreateCleanUper() );
+                Assert.Throws<ArgumentNullException>("environment", () => fixture.CreateCleanUper());
             }
 
             [Fact]
@@ -48,7 +48,7 @@ namespace Cake.Svn.Tests.Unit.CleanUp
 
                 // When
                 // Then
-                Assert.Throws<ArgumentNullException>( "clientFactoryMethod", () => fixture.CreateCleanUper() );
+                Assert.Throws<ArgumentNullException>("clientFactoryMethod", () => fixture.CreateCleanUper());
             }
         }
 
@@ -65,7 +65,7 @@ namespace Cake.Svn.Tests.Unit.CleanUp
 
                 // When
                 // Then
-                Assert.Throws<ArgumentNullException>( "settings", () => fixture.CleanUp() );
+                Assert.Throws<ArgumentNullException>("settings", () => fixture.CleanUp());
             }
 
             [Fact]
@@ -79,7 +79,7 @@ namespace Cake.Svn.Tests.Unit.CleanUp
 
                 // When
                 // Then
-                Assert.Throws<ArgumentNullException>( "path", () => fixture.CleanUp() );
+                Assert.Throws<ArgumentNullException>("path", () => fixture.CleanUp());
             }
 
             [Fact]
@@ -92,7 +92,7 @@ namespace Cake.Svn.Tests.Unit.CleanUp
                 fixture.CleanUp();
 
                 // Then
-                fixture.SvnClient.Received( 1 ).CleanUp( fixture.DirectoryPath.ToString(), fixture.Settings );
+                fixture.SvnClient.Received(1).CleanUp(fixture.DirectoryPath.ToString(), fixture.Settings);
             }
         }
     }
