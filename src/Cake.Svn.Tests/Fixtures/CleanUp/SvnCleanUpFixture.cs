@@ -23,9 +23,9 @@ namespace Cake.Svn.Tests.Fixtures.CleanUp
             GetSvnClient = () => SvnClient;
         }
 
-        internal SvnCleanUper CreateCleanUper()
+        internal SvnCleaner CreateCleanUper()
         {
-            return new SvnCleanUper(Environment, GetSvnClient);
+            return new SvnCleaner(Environment, GetSvnClient);
         }
 
         internal bool CleanUp()

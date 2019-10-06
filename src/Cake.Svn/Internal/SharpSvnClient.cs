@@ -143,9 +143,9 @@ namespace Cake.Svn.Internal
         }
 
         /// <inheritdoc/>
-        public bool CleanUp( string directoryPath, SvnCleanUpSettings settings )
+        public bool CleanUp(string directoryPath, SvnCleanUpSettings settings)
         {
-            return CleanUp( directoryPath, settings.ToSvnCleanUpArgs() );
+            return CleanUp(directoryPath, settings.ToSvnCleanUpArgs());
         }
     }
 }

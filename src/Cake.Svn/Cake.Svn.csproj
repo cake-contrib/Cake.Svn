@@ -55,7 +55,7 @@
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
     <Compile Include="Add\SvnAddSettingsExtensions.cs" />
-    <Compile Include="CleanUp\SvnCleanUper.cs" />
+    <Compile Include="CleanUp\SvnCleaner.cs" />
     <Compile Include="CleanUp\SvnCleanUpSettings.cs" />
     <Compile Include="CleanUp\SvnCleanUpSettingsExtensions.cs" />
     <Compile Include="Info\SvnInfo.cs" />
@@ -114,7 +114,6 @@
       <Version>1.9007.3987.251</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

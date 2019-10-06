@@ -9,7 +9,7 @@ namespace Cake.Svn
     {
         /// <summary>
         /// Runs SVN cleanup on the given directory using default settings.
-        /// SVN Cleanup removes all working copy locks left behind by crashed clients.
+        /// SVN cleanup removes all working copy locks left behind by crashed clients.
         /// </summary>
         /// <param name="context">The Cake context.</param>
         /// <param name="directory">The directory.</param>
@@ -29,14 +29,14 @@ namespace Cake.Svn
         [CakeMethodAlias]
         [CakeAliasCategory( "CleanUp" )]
         [CakeNamespaceImport( "Cake.Svn.CleanUp" )]
-        public static bool SvnCleanUp( this ICakeContext context, DirectoryPath directory )
+        public static bool SvnCleanUp(this ICakeContext context, DirectoryPath directory)
         {
-            return SvnCleanUp( context, directory, new SvnCleanUpSettings() );
+            return SvnCleanUp(context, directory, new SvnCleanUpSettings());
         }
 
         /// <summary>
         /// Runs SVN cleanup on the given directory using given settings settings.
-        /// SVN Cleanup removes all working copy locks left behind by crashed clients.
+        /// SVN cleanup removes all working copy locks left behind by crashed clients.
         /// </summary>
         /// <param name="context">The Cake context.</param>
         /// <param name="directory">The directory.</param>
@@ -61,11 +61,11 @@ namespace Cake.Svn
         [CakeMethodAlias]
         [CakeAliasCategory( "CleanUp" )]
         [CakeNamespaceImport( "Cake.Svn.CleanUp" )]
-        public static bool SvnCleanUp( this ICakeContext context, DirectoryPath directory, SvnCleanUpSettings settings )
+        public static bool SvnCleanUp(this ICakeContext context, DirectoryPath directory, SvnCleanUpSettings settings)
         {
-            SvnCleanUper cleaner = new SvnCleanUper( context.Environment, SvnClientFactoryMethod );
+            var cleaner = new SvnCleaner(context.Environment, SvnClientFactoryMethod);
 
-            return cleaner.CleanUp( directory, settings );
+            return cleaner.CleanUp(directory, settings);
         }
     }
 }

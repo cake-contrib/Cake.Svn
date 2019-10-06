@@ -94,6 +94,6 @@ namespace Cake.Svn
         /// <param name="directoryPath">The path in the working copy to clean up.</param>
         /// <param name="settings">Settings to use.</param>
         /// <returns><c>true</c> if the command was successful. Otherwise <c>false</c> will be returned.</returns>
-        bool CleanUp( string directoryPath, SvnCleanUpSettings settings );
+        bool CleanUp(string directoryPath, SvnCleanUpSettings settings);
     }
 }
