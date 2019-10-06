@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.Svn.Tests", "Cake.Svn.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{7287F939-CC23-4210-817F-CB33257E67F2}"
 	ProjectSection(SolutionItems) = preProject
-		..\setup.cake = ..\setup.cake
+		..\recipe.cake = ..\recipe.cake
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuspec", "nuspec", "{663B9533-C227-4980-A500-B570F3A545CF}"
@@ -27,8 +27,8 @@ Global
 		{AD32E5A7-C7D1-47BE-92A6-36368EE78953}.Debug|x64.Build.0 = Debug|x64
 		{AD32E5A7-C7D1-47BE-92A6-36368EE78953}.Release|x64.ActiveCfg = Release|x64
 		{AD32E5A7-C7D1-47BE-92A6-36368EE78953}.Release|x64.Build.0 = Release|x64
-		{8F154251-B8D3-4E42-A977-E145A27F9B34}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{8F154251-B8D3-4E42-A977-E145A27F9B34}.Debug|x64.Build.0 = Debug|Any CPU
+		{8F154251-B8D3-4E42-A977-E145A27F9B34}.Debug|x64.ActiveCfg = Debug|x64
+		{8F154251-B8D3-4E42-A977-E145A27F9B34}.Debug|x64.Build.0 = Debug|x64
 		{8F154251-B8D3-4E42-A977-E145A27F9B34}.Release|x64.ActiveCfg = Release|x64
 		{8F154251-B8D3-4E42-A977-E145A27F9B34}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
