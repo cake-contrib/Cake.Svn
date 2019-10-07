@@ -1,15 +1,15 @@
 ﻿using System;
 using Cake.Svn.Internal.Extensions;
 
-namespace Cake.Svn.Info
+namespace Cake.Svn.Status
 {
     /// <summary>
-    /// Result for <see cref="SvnInfo"/>.
+    /// Result for <see cref="SvnStatusTool"/>.
     /// </summary>
-    public sealed class SvnInfoResult
+    public sealed class SvnStatusResult
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SvnInfoResult"/> class.
+        /// Initializes a new instance of the <see cref="SvnStatusResult"/> class.
         /// </summary>
         /// <param name="repositoryId">The UUID of the Subversion repository.</param>
         /// <param name="repositoryRoot">The repository root Uri.</param>
@@ -17,11 +17,11 @@ namespace Cake.Svn.Info
         /// <param name="revision">The revision of the node.</param>
         /// <param name="lastChangedRevision">The last changed revision of the node.</param>
         /// <param name="uri">The full Uri of the node.</param>
-        /// <param name="path">The path of the file. The local path if requisting working version, 
+        /// <param name="path">The path of the file. The local path if requisting working version,
         /// otherwise the name of the file at the specified version.</param>
         /// <param name="fullPath">The path in a normalized format.</param>
-        /// <param name="nodeKind">The kind of the Subversion node.</param>
-        public SvnInfoResult(
+        /// <param name="svnStatus">The status of the Subversion node.</param>
+        public SvnStatusResult(
             Guid repositoryId,
             Uri repositoryRoot,
             string lastChangedAuthor,
@@ -30,7 +30,7 @@ namespace Cake.Svn.Info
             Uri uri,
             string path,
             string fullPath,
-            SvnKind nodeKind)
+            SvnStatus svnStatus)
         {
 #pragma warning disable SA1123 // Do not place regions within elements
             #region DupFinder Exclusion
@@ -48,13 +48,13 @@ namespace Cake.Svn.Info
             Uri = uri;
             Path = path;
             FullPath = fullPath;
-            NodeKind = nodeKind;
+            SvnStatus = svnStatus;
 
             #endregion
         }
 
         /// <summary>
-        /// Gets the UUID of the repository (if available). Otherwise Guid.Empty.
+        /// Gets the UUID of the repository (if available). Otherwise <see cref="Guid.Empty"/>.
         /// </summary>
         public Guid RepositoryId { get; }
 
@@ -91,12 +91,12 @@ namespace Cake.Svn.Info
 
         /// <summary>
         /// Gets the path in normalized format.
-        /// </summary> 
+        /// </summary>
         public string FullPath { get; }
 
         /// <summary>
-        /// Gets the kind of the subversion node.
+        /// Gets the status of the subversion node.
         /// </summary>
-        public SvnKind NodeKind { get; }
+        public SvnStatus SvnStatus { get; }
     }
 }
