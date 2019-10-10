@@ -9,6 +9,7 @@ using Cake.Svn.Delete;
 using Cake.Svn.Export;
 using Cake.Svn.Info;
 using Cake.Svn.Internal.Extensions;
+using Cake.Svn.Status;
 using Cake.Svn.Update;
 using Cake.Svn.Vacuum;
 using SharpSvn;
@@ -153,6 +154,33 @@ namespace Cake.Svn.Internal
         public bool Vacuum(string directoryPath, SvnVacuumSettings settings)
         {
             return Vacuum(directoryPath, settings.ToSvnVacuumArgs());
+        }
+
+        /// <inheritdoc/>
+        public IEnumerable<SvnStatusResult> Status(string fileOrDirectoryPath, SvnStatusSettings settings)
+        {
+            var statusResults = new List<SvnStatusEventArgs>();
+
+            Status(
+                fileOrDirectoryPath,
+                settings.ToSvnStatusArgs(),
+                statusHandler: (s, e) =>
+                {
+                    statusResults.Add(e);
+                });
+
+            return
+                (from eventArg in statusResults
+                 select new SvnStatusResult(
+                     eventArg.RepositoryId,
+                     eventArg.RepositoryRoot,
+                     eventArg.LastChangeAuthor,
+                     eventArg.Revision,
+                     eventArg.LastChangeRevision,
+                     eventArg.Uri,
+                     eventArg.Path,
+                     eventArg.FullPath,
+                     eventArg.LocalNodeStatus.ToSvnStatus())).ToList();
         }
     }
 }

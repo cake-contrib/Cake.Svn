@@ -63,6 +63,7 @@
     <Compile Include="Fixtures\Add\SvnAdderFixture.cs" />
     <Compile Include="Fixtures\Export\SvnExporterFixture.cs" />
     <Compile Include="Fixtures\Info\SvnInfoFixture.cs" />
+    <Compile Include="Fixtures\Status\SvnStatusFixture.cs" />
     <Compile Include="Fixtures\Update\SvnUpdaterFixture.cs" />
     <Compile Include="Fixtures\Vacuum\SvnVacuumFixture.cs" />
     <Compile Include="Internal\Extensions\CheckArgumentExtensionsTests.cs" />
@@ -81,6 +82,8 @@
     <Compile Include="Fixtures\Checkout\SvnCheckouterFixture.cs" />
     <Compile Include="Unit\Checkout\SvnCheckouterTests.cs" />
     <Compile Include="Unit\Checkout\SvnCheckoutSettingsTests.cs" />
+    <Compile Include="Unit\Status\SvnStatusSettingsTests.cs" />
+    <Compile Include="Unit\Status\SvnStatusTests.cs" />
     <Compile Include="Unit\Update\SvnUpdaterTests.cs" />
     <Compile Include="Unit\Update\SvnUpdateSettingsTests.cs" />
     <Compile Include="Unit\Vacuum\SvnVacuumSettingsTests.cs" />
