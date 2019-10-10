@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using Cake.Core.IO;
 using Cake.Svn.Add;
 using Cake.Svn.Checkout;
 using Cake.Svn.CleanUp;
 using Cake.Svn.Delete;
 using Cake.Svn.Export;
 using Cake.Svn.Info;
+using Cake.Svn.Status;
 using Cake.Svn.Update;
+using Cake.Svn.Vacuum;
 
 namespace Cake.Svn
 {
@@ -95,5 +95,21 @@ namespace Cake.Svn
         /// <param name="settings">Settings to use.</param>
         /// <returns><c>true</c> if the command was successful. Otherwise <c>false</c> will be returned.</returns>
         bool CleanUp(string directoryPath, SvnCleanUpSettings settings);
+
+        /// <summary>
+        /// Removes all unversioned and ignored files within the given directory.
+        /// </summary>
+        /// <param name="directoryPath">The path in the working copy to vacuum.</param>
+        /// <param name="settings">Settings to use.</param>
+        /// <returns><c>true</c> if the command was successful. Otherwise <c>false</c> will be returned.</returns>
+        bool Vacuum(string directoryPath, SvnVacuumSettings settings);
+
+        /// <summary>
+        /// Gets the status of working copy files and directories.
+        /// </summary>
+        /// <param name="fileOrDirectoryPath">The path to the local file or directory.</param>
+        /// <param name="settings">Settings to use.</param>
+        /// <returns>Result of the status operation.</returns>
+        IEnumerable<SvnStatusResult> Status(string fileOrDirectoryPath, SvnStatusSettings settings);
     }
 }

@@ -72,12 +72,17 @@
     <Compile Include="Internal\Extensions\SvnDepthExtensions.cs" />
     <Compile Include="Internal\Extensions\SvnLineStyleExtensions.cs" />
     <Compile Include="Internal\Extensions\SvnNodeKindExtensions.cs" />
+    <Compile Include="Internal\Extensions\SvnStatusExtensions.cs" />
     <Compile Include="ISvnClient.cs" />
     <Compile Include="Internal\SharpSvnClient.cs" />
     <Compile Include="Export\SvnExporter.cs" />
     <Compile Include="Export\SvnExportResult.cs" />
     <Compile Include="Export\SvnExportSettings.cs" />
     <Compile Include="Export\SvnExportSettingsExtensions.cs" />
+    <Compile Include="Status\SvnStatusTool.cs" />
+    <Compile Include="Status\SvnStatusResult.cs" />
+    <Compile Include="Status\SvnStatusSettings.cs" />
+    <Compile Include="Status\SvnStatusSettingsExtensions.cs" />
     <Compile Include="SvnAliases.Add.cs" />
     <Compile Include="SvnAliases.CleanUp.cs" />
     <Compile Include="SvnAliases.cs" />
@@ -85,6 +90,7 @@
     <Compile Include="SvnAliases.Info.cs" />
     <Compile Include="SvnAliases.Delete.cs" />
     <Compile Include="SvnAliases.Update.cs" />
+    <Compile Include="SvnAliases.Vacuum.cs" />
     <Compile Include="SvnCredentials.cs" />
     <Compile Include="SvnClientArgsExtensions.cs" />
     <Compile Include="SvnKind.cs" />
@@ -92,6 +98,7 @@
     <Compile Include="SvnLineStyle.cs" />
     <Compile Include="SvnRemoteSettings.cs" />
     <Compile Include="SvnSettings.cs" />
+    <Compile Include="SvnStatus.cs" />
     <Compile Include="SvnTool.cs" />
     <Compile Include="Checkout\SvnCheckouter.cs" />
     <Compile Include="Checkout\SvnCheckoutSettings.cs" />
@@ -102,9 +109,11 @@
     <Compile Include="Update\SvnUpdateResult.cs" />
     <Compile Include="Update\SvnUpdateSettings.cs" />
     <Compile Include="Update\SvnUpdateSettingsExtensions.cs" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Vacuum\SvnVacuum.cs" />
+    <Compile Include="Vacuum\SvnVacuumSettings.cs" />
+    <Compile Include="Vacuum\SvnVacuumSettingsExtensions.cs" />
     <Compile Include="SvnAliases.Export.cs" />
+    <Compile Include="SvnAliases.Status.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Cake.Core">
