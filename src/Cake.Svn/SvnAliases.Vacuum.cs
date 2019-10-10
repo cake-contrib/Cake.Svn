@@ -9,7 +9,8 @@ namespace Cake.Svn
     {
         /// <summary>
         /// Runs SVN vacuum on the given directory using default settings.
-        /// SVN vacuum removs all ignored and unversioned files and directories.
+        /// SVN vacuum removes all ignored and unversioned files and directories.
+        /// This does not revert any modifications to files within the working copy.
         /// </summary>
         /// <param name="context">The Cake context.</param>
         /// <param name="directory">The directory.</param>
@@ -36,7 +37,8 @@ namespace Cake.Svn
 
         /// <summary>
         /// Runs SVN vacuum on the given directory using default settings.
-        /// SVN vacuum removs all ignored and unversioned files and directories.
+        /// SVN vacuum removes all ignored and unversioned files and directories.
+        /// This does not revert any modifications to files within the working copy.
         /// </summary>
         /// <param name="context">The Cake context.</param>
         /// <param name="directory">The directory.</param>
@@ -45,7 +47,7 @@ namespace Cake.Svn
         /// <c>true</c> if the command was successful. Otherwise <c>false</c> will be returned.
         /// </returns>
         /// <example>
-        /// <para>Cleans a directory inside of a SVN working copy.</para>
+        /// <para>Vacuums a directory inside of a SVN working copy.</para>
         /// <code>
         /// <![CDATA[ 
         ///     SvnVacuumSettings settings = new SvnVacuumSettings
