@@ -85,6 +85,7 @@
     <Compile Include="SvnAliases.Info.cs" />
     <Compile Include="SvnAliases.Delete.cs" />
     <Compile Include="SvnAliases.Update.cs" />
+    <Compile Include="SvnAliases.Vacuum.cs" />
     <Compile Include="SvnCredentials.cs" />
     <Compile Include="SvnClientArgsExtensions.cs" />
     <Compile Include="SvnKind.cs" />
@@ -102,6 +103,9 @@
     <Compile Include="Update\SvnUpdateResult.cs" />
     <Compile Include="Update\SvnUpdateSettings.cs" />
     <Compile Include="Update\SvnUpdateSettingsExtensions.cs" />
+    <Compile Include="Vacuum\SvnVacuum.cs" />
+    <Compile Include="Vacuum\SvnVacuumSettings.cs" />
+    <Compile Include="Vacuum\SvnVacuumSettingsExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SvnAliases.Export.cs" />

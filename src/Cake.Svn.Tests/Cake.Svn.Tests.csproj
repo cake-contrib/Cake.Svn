@@ -64,6 +64,7 @@
     <Compile Include="Fixtures\Export\SvnExporterFixture.cs" />
     <Compile Include="Fixtures\Info\SvnInfoFixture.cs" />
     <Compile Include="Fixtures\Update\SvnUpdaterFixture.cs" />
+    <Compile Include="Fixtures\Vacuum\SvnVacuumFixture.cs" />
     <Compile Include="Internal\Extensions\CheckArgumentExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unit\CleanUp\SvnCleanUperTests.cs" />
@@ -82,6 +83,8 @@
     <Compile Include="Unit\Checkout\SvnCheckoutSettingsTests.cs" />
     <Compile Include="Unit\Update\SvnUpdaterTests.cs" />
     <Compile Include="Unit\Update\SvnUpdateSettingsTests.cs" />
+    <Compile Include="Unit\Vacuum\SvnVacuumSettingsTests.cs" />
+    <Compile Include="Unit\Vacuum\SvnVacuumTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cake.Svn\Cake.Svn.csproj">

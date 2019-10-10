@@ -10,6 +10,7 @@ using Cake.Svn.Export;
 using Cake.Svn.Info;
 using Cake.Svn.Internal.Extensions;
 using Cake.Svn.Update;
+using Cake.Svn.Vacuum;
 using SharpSvn;
 using SharpSvn.Security;
 
@@ -146,6 +147,12 @@ namespace Cake.Svn.Internal
         public bool CleanUp(string directoryPath, SvnCleanUpSettings settings)
         {
             return CleanUp(directoryPath, settings.ToSvnCleanUpArgs());
+        }
+
+        /// <inheritdoc/>
+        public bool Vacuum(string directoryPath, SvnVacuumSettings settings)
+        {
+            return Vacuum(directoryPath, settings.ToSvnVacuumArgs());
         }
     }
 }
