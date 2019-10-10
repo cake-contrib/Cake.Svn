@@ -36,7 +36,7 @@ namespace Cake.Svn
         }
 
         /// <summary>
-        /// Runs SVN vacuum on the given directory using default settings.
+        /// Runs SVN vacuum on the given directory using given settings settings.
         /// SVN vacuum removes all ignored and unversioned files and directories.
         /// This does not revert any modifications to files within the working copy.
         /// </summary>
