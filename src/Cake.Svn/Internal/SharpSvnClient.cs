@@ -9,6 +9,7 @@ using Cake.Svn.Delete;
 using Cake.Svn.Export;
 using Cake.Svn.Info;
 using Cake.Svn.Internal.Extensions;
+using Cake.Svn.Revert;
 using Cake.Svn.Status;
 using Cake.Svn.Update;
 using Cake.Svn.Vacuum;
@@ -154,6 +155,18 @@ namespace Cake.Svn.Internal
         public bool Vacuum(string directoryPath, SvnVacuumSettings settings)
         {
             return Vacuum(directoryPath, settings.ToSvnVacuumArgs());
+        }
+
+        /// <inheritdoc/>
+        public bool Revert(string fileOrDirectoryPath, SvnRevertSettings settings)
+        {
+            return Revert(fileOrDirectoryPath, settings.ToSvnRevertArgs());
+        }
+
+        /// <inheritdoc/>
+        public bool Revert(ICollection<string> fileOrDirectoryPaths, SvnRevertSettings settings)
+        {
+            return Revert(fileOrDirectoryPaths, settings.ToSvnRevertArgs());
         }
 
         /// <inheritdoc/>

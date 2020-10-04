@@ -79,6 +79,9 @@
     <Compile Include="Export\SvnExportResult.cs" />
     <Compile Include="Export\SvnExportSettings.cs" />
     <Compile Include="Export\SvnExportSettingsExtensions.cs" />
+    <Compile Include="Revert\SvnReverter.cs" />
+    <Compile Include="Revert\SvnRevertSettings.cs" />
+    <Compile Include="Revert\SvnRevertSettingsExtensions.cs" />
     <Compile Include="Status\SvnStatusTool.cs" />
     <Compile Include="Status\SvnStatusResult.cs" />
     <Compile Include="Status\SvnStatusSettings.cs" />
@@ -89,6 +92,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SvnAliases.Info.cs" />
     <Compile Include="SvnAliases.Delete.cs" />
+    <Compile Include="SvnAliases.Revert.cs" />
     <Compile Include="SvnAliases.Update.cs" />
     <Compile Include="SvnAliases.Vacuum.cs" />
     <Compile Include="SvnCredentials.cs" />

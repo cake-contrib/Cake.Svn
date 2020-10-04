@@ -6,6 +6,7 @@ using Cake.Svn.CleanUp;
 using Cake.Svn.Delete;
 using Cake.Svn.Export;
 using Cake.Svn.Info;
+using Cake.Svn.Revert;
 using Cake.Svn.Status;
 using Cake.Svn.Update;
 using Cake.Svn.Vacuum;
@@ -111,5 +112,23 @@ namespace Cake.Svn
         /// <param name="settings">Settings to use.</param>
         /// <returns>Result of the status operation.</returns>
         IEnumerable<SvnStatusResult> Status(string fileOrDirectoryPath, SvnStatusSettings settings);
+
+        /// <summary>
+        /// Removes local changes in a repository by restoring the pristine version of working copy paths.
+        /// This undos local modifications, and can not be undone.
+        /// </summary>
+        /// <param name="fileOrDirectoryPath">The file or directory to revert.</param>
+        /// <param name="settings">Settings to use.</param>
+        /// <returns>Result of the revert operation.</returns>
+        bool Revert(string fileOrDirectoryPath, SvnRevertSettings settings);
+
+        /// <summary>
+        /// Removes local changes in a repository by restoring the pristine version of working copy paths.
+        /// This undos local modifications, and can not be undone.
+        /// </summary>
+        /// <param name="fileOrDirectoryPaths">A colletion of files or directories to revert.</param>
+        /// <param name="settings">Settings to use.</param>
+        /// <returns>Result of the revert operation.</returns>
+        bool Revert(ICollection<string> fileOrDirectoryPaths, SvnRevertSettings settings);
     }
 }
